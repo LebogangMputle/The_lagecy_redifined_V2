@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import './Insights.css'
 import sampleVideo from "../../assets/video.mp4"
 

@@ -17,33 +17,44 @@
     left:50vh;
 }
 
+.pNames, .pRole{
+    text-align: center;
+    font-size: large;
+}
+
 .pNames{
+    font-size: larger;
     font-weight: bold;
-    width: 45vh;
 }
 
 img{
-    width: 30%;
+    width: 60%;
+    height: 50%;
     margin: 5px;
+    border: 1px black solid;
 }
 
 .members{
-    position: relative;
     display: flex;
-    flex-direction: row;
-    background-color: #e6aa06;
-    padding: 5px;
-    margin: 5px;
-    color:rgb(5, 5, 5);
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 200px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    background-color: #f7ac0d;
+    padding: 10px;
+    border-radius: 10px;
 }
+
 
 #divSlide{
     display: flex;
-    flex-direction: row;
     overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;;
-    width: 75vh;
-    position: relative;
-    left: 50vh;
+    width: 45%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+
 }
+

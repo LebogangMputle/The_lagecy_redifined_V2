@@ -1,9 +1,37 @@
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import './About.css'
 
 const About = () => {
+
+  const src1 = "../assets/Screenshot (114).png"
+  const src2 = "../assets/Screenshot (116).png"
+  const src3 = "../assets/Screenshot (115).png"
+  const src4 = "../assets/Screenshot (117).png"
+
+  useEffect(()=>{
+    const m1 = document.getElementById('M1');
+    const m2 = document.getElementById('M2');
+    const m3 = document.getElementById('M3');
+    const m4 = document.getElementById('M4');
+
+      const rect = m1.getBoundingClientRect();
+      const rect1 = m2.getBoundingClientRect();
+      const rect2 = m3.getBoundingClientRect();
+      const rect3 = m4.getBoundingClientRect();
+
+      console.log('m1X:'+ rect.x +',m1y:'+ rect.y);
+      console.log('m2X:'+ rect1.x +',m2y:'+ rect1.y);
+      console.log('m3X:'+ rect2.x +',m3y:'+ rect2.y);
+      console.log('m4X:'+ rect3.x +',m4y:'+ rect3.y);
+
+      const scrolldiv = document.getElementById('divSlide');
+      scrolldiv.addEventListener('scroll',()=>{
+         console.log(scrolldiv.scrollLeft)
+      })
+      
+  },[]);
 
   return (
     <div id='about'>
@@ -43,7 +71,7 @@ const About = () => {
      <div id='divSlide'>
                
                <div id='M1' className="members">
-                  <img src="../src/assets/Screenshot (114).png" alt='Lesego' />
+                  <img src={src1} alt='Lesego' />
                  <div>
                   <p className="pNames">Lesego Khoele (CIA),Mphil</p>
                   <p className="pRole">Md and Founder<br/> SMME Business Developer</p>
@@ -51,7 +79,7 @@ const About = () => {
                </div>
 
                <div id='M2' className="members">
-               <img src="../src/assets/Screenshot (116).png" alt='Karabo' />
+               <img src={src2} alt='Karabo' />
                <div>
                 <p className="pNames">Karabo Kgomanyane</p>
                 <p className="pRole">Data-Led Marketing Specialist <br/>Thee Anchor MD & Founder</p>
@@ -59,7 +87,7 @@ const About = () => {
                </div>
 
                <div id='M3' className="members">
-               <img src="../src/assets/Screenshot (115).png" alt='Mphoma' />
+               <img src={src3} alt='Mphoma' />
                 <div>
                 <p className="pNames">Mphoma Putsoane </p>
                 <p className="pRole">Business Accounting<br/>Development Specialist</p>
@@ -67,7 +95,7 @@ const About = () => {
                </div>
 
                <div id='M4' className="members">
-               <img src="../src/assets/Screenshot (117).png" alt='Boipelo' />
+               <img src={src4} alt='Boipelo' />
                 <div>
                 <p className="pNames">Boipelo Maringa </p>
                 <p className="pRole">Business and Personal <br/>Finance Specialist</p>
