@@ -1,0 +1,49 @@
+#p1{
+    width: 90vh;
+    position: relative;
+    left:10vh;
+
+}
+
+#abouth1 {
+
+    position: relative;
+    left: 50vh;
+}
+
+#div_wwa{
+    width: 90vh;
+    position: relative;
+    left:50vh;
+}
+
+.pNames{
+    font-weight: bold;
+    width: 45vh;
+}
+
+img{
+    width: 30%;
+    margin: 5px;
+}
+
+.members{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #e6aa06;
+    padding: 5px;
+    margin: 5px;
+    color:rgb(5, 5, 5);
+}
+
+#divSlide{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;;
+    width: 75vh;
+    position: relative;
+    left: 50vh;
+}
