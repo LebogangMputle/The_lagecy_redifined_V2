@@ -1,0 +1,60 @@
+#p1{
+    width: 90vh;
+    position: relative;
+    left:10vh;
+
+}
+
+#abouth1 {
+
+    position: relative;
+    left: 50vh;
+}
+
+#div_wwa{
+    width: 90vh;
+    position: relative;
+    left:50vh;
+}
+
+.pNames, .pRole{
+    text-align: center;
+    font-size: large;
+}
+
+.pNames{
+    font-size: larger;
+    font-weight: bold;
+}
+
+img{
+    width: 60%;
+    height: 50%;
+    margin: 5px;
+    border: 1px black solid;
+}
+
+.members{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 200px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    background-color: #f7ac0d;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+#divSlide{
+    display: flex;
+    overflow-x: auto;
+    width: 45%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
