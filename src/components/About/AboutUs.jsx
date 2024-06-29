@@ -1,37 +1,33 @@
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 import './About.css'
 
 const About = () => {
 
-  const src1 = "../assets/Screenshot (114).png"
-  const src2 = "../assets/Screenshot (116).png"
-  const src3 = "../assets/Screenshot (115).png"
-  const src4 = "../assets/Screenshot (117).png"
+  const src1 = "../Screenshot (114).png"
+  const src2 = "../Screenshot (116).png"
+  const src3 = "../Screenshot (115).png"
+  const src4 = "../Screenshot (117).png"
 
-  useEffect(()=>{
-    const m1 = document.getElementById('M1');
-    const m2 = document.getElementById('M2');
-    const m3 = document.getElementById('M3');
-    const m4 = document.getElementById('M4');
+    // const m1 = document.getElementById('M1');
+    // const m2 = document.getElementById('M2');
+    // const m3 = document.getElementById('M3');
+    // const m4 = document.getElementById('M4');
 
-      const rect = m1.getBoundingClientRect();
-      const rect1 = m2.getBoundingClientRect();
-      const rect2 = m3.getBoundingClientRect();
-      const rect3 = m4.getBoundingClientRect();
+  const left = ()=>{
+    const scrolldiv = document.getElementById('divSlide');
+    scrolldiv.insertBefore(scrolldiv.lastElementChild, scrolldiv.firstElementChild);
 
-      console.log('m1X:'+ rect.x +',m1y:'+ rect.y);
-      console.log('m2X:'+ rect1.x +',m2y:'+ rect1.y);
-      console.log('m3X:'+ rect2.x +',m3y:'+ rect2.y);
-      console.log('m4X:'+ rect3.x +',m4y:'+ rect3.y);
 
-      const scrolldiv = document.getElementById('divSlide');
-      scrolldiv.addEventListener('scroll',()=>{
-         console.log(scrolldiv.scrollLeft)
-      })
-      
-  },[]);
+
+  }
+
+  const right = ()=>{
+    const scrolldiv = document.getElementById('divSlide');
+    scrolldiv.appendChild(scrolldiv.firstElementChild);
+    
+  }
 
   return (
     <div id='about'>
@@ -68,7 +64,10 @@ const About = () => {
         <h2>Our Team</h2>
        </div>
      </div>
-     <div id='divSlide'>
+
+     <button className="errow" onClick={left}>⬅️</button>
+     <button className="errow" onClick={right}>➡️</button>
+     <div id='divSlide' className="divSlide">
                
                <div id='M1' className="members">
                   <img src={src1} alt='Lesego' />
