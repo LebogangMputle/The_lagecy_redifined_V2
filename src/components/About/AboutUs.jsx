@@ -1,37 +1,40 @@
 
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 import './About.css'
 
 const About = () => {
 
-  const src1 = "../assets/Screenshot (114).png"
-  const src2 = "../assets/Screenshot (116).png"
-  const src3 = "../assets/Screenshot (115).png"
-  const src4 = "../assets/Screenshot (117).png"
+  const src1 = "../Screenshot (114).png"
+  const src2 = "../Screenshot (116).png"
+  const src3 = "../Screenshot (115).png"
+  const src4 = "../Screenshot (117).png"
+    
 
-  useEffect(()=>{
-    const m1 = document.getElementById('M1');
-    const m2 = document.getElementById('M2');
-    const m3 = document.getElementById('M3');
-    const m4 = document.getElementById('M4');
+  const left = ()=>{
+    const scrolldiv = document.getElementById('divSlide');
+    setTimeout(()=>{
+      scrolldiv.appendChild(scrolldiv.firstElementChild);
+    },400);
+    
+ 
 
-      const rect = m1.getBoundingClientRect();
-      const rect1 = m2.getBoundingClientRect();
-      const rect2 = m3.getBoundingClientRect();
-      const rect3 = m4.getBoundingClientRect();
 
-      console.log('m1X:'+ rect.x +',m1y:'+ rect.y);
-      console.log('m2X:'+ rect1.x +',m2y:'+ rect1.y);
-      console.log('m3X:'+ rect2.x +',m3y:'+ rect2.y);
-      console.log('m4X:'+ rect3.x +',m4y:'+ rect3.y);
 
-      const scrolldiv = document.getElementById('divSlide');
-      scrolldiv.addEventListener('scroll',()=>{
-         console.log(scrolldiv.scrollLeft)
-      })
-      
-  },[]);
+  }
+
+  const right = ()=>{
+    const scrolldiv = document.getElementById('divSlide');
+    setTimeout(()=>{
+      scrolldiv.insertBefore(scrolldiv.lastElementChild, scrolldiv.firstElementChild);
+    },400);
+ 
+    
+  }
+
+
 
   return (
     <div id='about'>
@@ -68,17 +71,12 @@ const About = () => {
         <h2>Our Team</h2>
        </div>
      </div>
-     <div id='divSlide'>
-               
-               <div id='M1' className="members">
-                  <img src={src1} alt='Lesego' />
-                 <div>
-                  <p className="pNames">Lesego Khoele (CIA),Mphil</p>
-                  <p className="pRole">Md and Founder<br/> SMME Business Developer</p>
-                  </div>
-               </div>
 
-               <div id='M2' className="members">
+     <button className="errow" id='leftE' onClick={left}><FontAwesomeIcon icon={faChevronLeft} color="grey" size="4x"/></button>
+     <button className="errow" id='rightE' onClick={right}><FontAwesomeIcon  icon={faChevronRight} color="grey" size="4x"/></button>
+     <div id='divSlide' className="divSlide" >
+              
+               <div id='M2' className="members slide">
                <img src={src2} alt='Karabo' />
                <div>
                 <p className="pNames">Karabo Kgomanyane</p>
@@ -86,7 +84,15 @@ const About = () => {
                 </div>
                </div>
 
-               <div id='M3' className="members">
+               <div id='M1' className="members slide">
+                  <img src={src1} alt='Lesego' />
+                 <div>
+                  <p className="pNames">Lesego Khoele (CIA),Mphil</p>
+                  <p className="pRole">Md and Founder<br/> SMME Business Developer</p>
+                  </div>
+               </div>
+
+               <div id='M3' className="members slide">
                <img src={src3} alt='Mphoma' />
                 <div>
                 <p className="pNames">Mphoma Putsoane </p>
@@ -94,7 +100,7 @@ const About = () => {
                 </div>
                </div>
 
-               <div id='M4' className="members">
+               <div id='M4' className="members slide">
                <img src={src4} alt='Boipelo' />
                 <div>
                 <p className="pNames">Boipelo Maringa </p>
