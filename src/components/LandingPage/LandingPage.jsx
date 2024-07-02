@@ -5,6 +5,7 @@ import Courses from "../Courses/Courses";
 import AboutUs from "../About/AboutUs";
 import Insights from "../Insights/Insights";
 import '../LandingPage/LandingPage.css'
+import Home from "../Home";
 
 
 
@@ -13,11 +14,7 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       <Header />
-      <div className="content">
-        <h1 className="H1">Legacy Redefined</h1>
-        <p>Redefining business processes and risk</p>
-        <p>Your distinguished business process and risk experts</p>
-      </div>
+      <Home />
       <Courses />
       <AboutUs/>
       <Insights />
