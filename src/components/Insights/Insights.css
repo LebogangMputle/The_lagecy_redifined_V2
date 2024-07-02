@@ -1,50 +1,49 @@
 .insights {
-    min-height: 60vh;
-  }
-  .insights {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .company-insights,
-  .video-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    color: #444;
-    margin-bottom: 15px;
-  }
-  
-  .company-insights p,
-  .video-section p {
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  .video-box {
-    width: 100%;
-    height: auto;
-  }
-  
-  video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+  min-height: 60vh;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #000; /* Black background */
+  color: #ffd700; /* Gold text color */
+}
+
+h1 {
+  text-align: center;
+  color: #ffd700; /* Gold heading color */
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.company-insights,
+.video-section {
+  background-color: #001f3f; /* Dark blue background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #ffd700; /* Gold heading color */
+  margin-bottom: 15px;
+}
+
+.company-insights p,
+.video-section p {
+  color: #fff; /* White text color */
+  line-height: 1.6;
+}
+
+.video-box {
+  width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

@@ -1,42 +1,62 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+  padding-top: 60px; /* Add padding-top to account for fixed navbar */
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #000; /* Black background */
+  padding: 10px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  font-size: 1.2em;
+}
+
+.navbar-item a {
+  color: #ffd700; /* Gold text color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-item a:hover {
+  color: #fff; /* White color on hover */
+}
+
+/* Home, Courses, AboutUs, Insights page styles */
+.content {
+  padding: 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  color: #ffd700; /* Gold heading color */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  color: #fff; /* White text color */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.content a {
+  color: #ffd700; /* Gold link color */
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.card {
-  padding: 2em;
+.content a:hover {
+  color: #fff; /* White color on hover */
 }
 
-.read-the-docs {
-  color: #888;
-}
+/* Additional styling for buttons, forms, etc. can go here */

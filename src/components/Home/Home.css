@@ -1,0 +1,22 @@
+/* Home.css */
+
+/* Styling for the content */
+.content {
+    background-color: #000000; /* Black background */
+    color: #ffd700; /* Gold text color */
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Modern font */
+  }
+  
+  /* Styling for the H1 heading */
+  .H1 {
+    font-size: 8em;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for paragraphs */
+  .content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
