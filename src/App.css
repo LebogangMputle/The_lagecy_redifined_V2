@@ -1,62 +1,10 @@
-/* General styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000; /* Black background */
-  color: #fff; /* White text color */
-  padding-top: 60px; /* Add padding-top to account for fixed navbar */
-}
-
-/* Navbar styles */
-.navbar {
-  background-color: #000; /* Black background */
-  padding: 10px;
-}
-
-.navbar-list {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Adjust font-family as needed */
 }
 
-.navbar-item {
-  font-size: 1.2em;
+.main-content {
+  padding-top: 60px; /* Matches the navbar height */
 }
-
-.navbar-item a {
-  color: #ffd700; /* Gold text color */
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.navbar-item a:hover {
-  color: #fff; /* White color on hover */
-}
-
-/* Home, Courses, AboutUs, Insights page styles */
-.content {
-  padding: 20px;
-  text-align: center;
-}
-
-h1 {
-  color: #ffd700; /* Gold heading color */
-}
-
-p {
-  color: #fff; /* White text color */
-}
-
-.content a {
-  color: #ffd700; /* Gold link color */
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.content a:hover {
-  color: #fff; /* White color on hover */
-}
-
-/* Additional styling for buttons, forms, etc. can go here */

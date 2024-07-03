@@ -1,96 +1,68 @@
-/* General styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000; /* Black background */
-  color: #ffd700; /* Gold text color */
+/* Courses component styles */
+.courses {
+  padding-bottom: 0px;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Default text color */
 }
 
-/* Center all content within the .content div */
 .content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.heading {
+  padding-top: 0;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffd700;; /* Dark blue heading color */
+}
+
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.workshop-item {
+  background-color: #0000; /* White background */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* Increase font size for both headings */
-.heading,
-.subheading {
-  font-size: 2em;
-  font-weight: bold;
-  color: #000080; /* Dark blue color */
-  margin: 1rem 0;
+.workshop-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
-/* Add a generic fade-in animation */
-.animated {
-  animation: fadeIn 2s ease-in-out;
-}
-
-/* Grid layout for courses */
-.courses {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  min-height: 50vh;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Style the background image */
-.background-image {
-  width: 100%;
-  height: 100%;
-  background-image: url("https://clipart-library.com/new_gallery/graduation-cap-clip-art-34.png");
-  background-size: cover;
-  background-position: center;
-  animation: fadeIn 1s ease-in-out forwards;
-  padding: 50px;
-}
-
-.background-image:hover {
-  opacity: 0.8; /* Reduce opacity on hover */
-  filter: grayscale(0.5); /* Add grayscale effect on hover */
-}
-
-/* Style the content area */
-.courses .content {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  z-index: 1;
-  color: #ffd700; /* Gold text color */
-}
-
-/* Style headings and paragraphs */
-.courses h1,
-.courses p {
+.workshop-item h4,
+.workshop-item p {
   margin: 0;
-  font-family: Arial, sans-serif;
 }
 
-.courses h1 {
-  font-size: 2rem;
-  color: #ffd700; /* Gold heading color */
+.workshop-item {
+  font-size: 0.9rem;
+  color: #ffd700;;
 }
 
-.courses p {
-  font-size: 1rem;
-  color: #ccc; /* Light gray text color */
+/* Animation classes */
+.animated {
+  animation-duration: 0.5s;
 }
 
-/* Style the call to action (CTA) link */
-.courses a {
-  color: #ffd700; /* Gold color for links */
-  font-weight: bold;
-  text-decoration: none;
+.fadeIn {
+  animation-name: fadeIn;
 }
 
-.courses a:hover {
-  text-decoration: underline;
+.bounceIn {
+  animation-name: bounceIn;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -100,65 +72,11 @@ body {
   }
 }
 
-/* Bounce animation for h1 */
-.animated.bounceIn {
-  animation: bounceIn 1s ease-in-out forwards;
-}
-
 @keyframes bounceIn {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
-}
-
-/* Zoom animation for h2 */
-.animated.zoomIn {
-  animation: zoomIn 0.5s ease-in-out forwards;
-}
-
-/* Grid layout for workshops */
-.workshop-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-/* Workshop item styles */
-.workshop-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  border-radius: 5px;
-  text-align: left;
-  background-color: #000080; /* Dark blue background */
-  color: #ffd700; /* Gold text color */
-}
-
-.workshop-item:hover {
-  background-color: #001f3f; /* Darker blue on hover */
-}
-
-/* Animation for counting */
-.countUp {
-  animation: count 2s steps(5, end) forwards;
-}
-
-@keyframes count {
   from {
-    content: "Courses (0)";
+    transform: scale(0.8);
   }
   to {
-    content: "Courses (5+)";
+    transform: scale(1);
   }
 }

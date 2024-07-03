@@ -1,15 +1,38 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
+  const [menuActive, setMenuActive] = useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuActive(!menuActive);
+  };
+
   return (
     <nav className="navbar">
-      <ul className="navbar-list">
-        <li className="navbar-item"><Link to="/">Home</Link></li>
-        <li className="navbar-item"><Link to="/courses">Courses</Link></li>
-        <li className="navbar-item"><Link to="/insights">Insights</Link></li>
-        <li className="navbar-item"><Link to="/aboutUs">AboutUs</Link></li>
-      </ul>
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          Logo
+        </Link>
+        <div className="menu-icon" onClick={handleMenuToggle}>
+          &#9776; {/* Hamburger menu icon */}
+        </div>
+        <ul className={`navbar-list ${menuActive ? 'active' : ''}`}>
+          <li className="navbar-item" onClick={handleMenuToggle}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className="navbar-item" onClick={handleMenuToggle}>
+            <Link to="/courses">Courses</Link>
+          </li>
+          <li className="navbar-item" onClick={handleMenuToggle}>
+            <Link to="/insights">Insights</Link>
+          </li>
+          <li className="navbar-item" onClick={handleMenuToggle}>
+            <Link to="/aboutUs">AboutUs</Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

@@ -4,7 +4,8 @@
 .content {
     background-color: #000000; /* Black background */
     color: #ffd700; /* Gold text color */
-    padding: 20px;
+    padding: 200px 40px;
+    margin: 40px;
     font-family: Arial, sans-serif; /* Modern font */
   }
   

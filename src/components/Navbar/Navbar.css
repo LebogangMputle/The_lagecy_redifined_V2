@@ -8,14 +8,17 @@
   width: 100%;
   top: 0;
   z-index: 1000; /* Ensure it stays above other content */
-  padding: 0 20px;
+  padding: 0 0; /* Adjust padding as needed */
 }
+
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1200px; /* Max width to limit navbar width */
+  margin: 0 auto; /* Center align the navbar */
 }
 
 .navbar-logo {
@@ -26,7 +29,7 @@
 }
 
 .menu-icon {
-  display: none;
+  display: none; /* Hide menu icon by default */
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
@@ -60,7 +63,7 @@
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .menu-icon {
-    display: block;
+    display: flex;
   }
 
   .navbar-list {
@@ -79,6 +82,7 @@
   }
 
   .navbar-item {
-    margin: 2rem 0;
+    margin: 1rem 0; /* Adjusted margin */
+    text-align: center; /* Center align items */
   }
 }
