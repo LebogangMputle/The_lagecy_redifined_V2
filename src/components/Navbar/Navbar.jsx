@@ -31,6 +31,9 @@ const Navbar = () => {
           <li className="navbar-item" onClick={handleMenuToggle}>
             <Link to="/aboutUs">AboutUs</Link>
           </li>
+          <li className="navbar-item" onClick={handleMenuToggle}>
+            <Link to="/myBlog">My Blog</Link>
+          </li>
         </ul>
       </div>
     </nav>
