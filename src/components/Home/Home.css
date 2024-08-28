@@ -1,23 +1,26 @@
-/* Home.css */
-
 /* Styling for the content */
 .content {
-    background-color: #000000; /* Black background */
-    color: #ffd700; /* Gold text color */
-    padding: 200px 40px;
-    margin: 40px;
-    font-family: Arial, sans-serif; /* Modern font */
-  }
-  
-  /* Styling for the H1 heading */
-  .H1 {
-    font-size: 8em;
-    margin-bottom: 20px;
-  }
-  
-  /* Styling for paragraphs */
-  .content p {
-    font-size: 1.2em;
-    line-height: 1.6;
-  }
-  
+  background-color: #000000; /* Black background */
+  color: #ffd700; /* Gold text color */
+  padding: 200px 40px;
+  margin: 40px;
+  font-family: Arial, sans-serif; /* Modern font */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center text content */
+}
+
+/* Styling for the H1 heading */
+.H1 {
+  font-size: 8em;
+  margin-bottom: 20px;
+}
+
+/* Styling for paragraphs */
+.content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px; /* Limit the width for better readability */
+  text-align: center;
+}
