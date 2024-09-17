@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.jpeg'; // Replace with the actual path to your logo
 import './Navbar.css';
 
@@ -13,35 +13,32 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <NavLink to="/" className="navbar-logo">
           <img src={logo} alt="Logo" className="logo-image" />
-        </Link>
+        </NavLink>
         <div className="menu-icon" onClick={handleMenuToggle}>
           &#9776; {/* Hamburger menu icon */}
         </div>
         <ul className={`navbar-list ${menuActive ? 'active' : ''}`}>
           <li className="navbar-item" onClick={handleMenuToggle}>
-            <Link to="/">Home</Link>
+            <NavLink to="/" activeClassName="active-link" exact>HOME</NavLink>
           </li>
           <li className="navbar-item" onClick={handleMenuToggle}>
-            <Link to="/about">About us</Link>
+            <NavLink to="/about" activeClassName="active-link">ABOUT US</NavLink>
           </li>
           <li className="navbar-item" onClick={handleMenuToggle}>
-            <Link to="/services">Our Services</Link>
+            <NavLink to="/services" activeClassName="active-link">OUR SERVICES</NavLink>
           </li>
           <li className="navbar-item" onClick={handleMenuToggle}>
-            <Link to="/insights">Insights</Link>
+            <NavLink to="/insights" activeClassName="active-link">INSIGHTS</NavLink>
           </li>
           <li className="navbar-item" onClick={handleMenuToggle}>
-            <Link to="/blogs">My Blogs</Link> {/* Updated link */}
+            <NavLink to="/blogs" activeClassName="active-link">MY BLOGS</NavLink>
           </li>
           <li className="navbar-item" onClick={handleMenuToggle}>
-            <Link to="/contactUs">Contact Us</Link>
+            <NavLink to="/contactUs" activeClassName="active-link">CONTACT US</NavLink>
           </li>
         </ul>
-        {/* <div className="search-bar">
-          <input type="text" placeholder="Search..." />
-        </div> */}
       </div>
     </nav>
   );
