@@ -1,116 +1,22 @@
+import React from 'react';
+import './AboutUs.css'; // Ensure you have this CSS file or adapt the styles accordingly
 
-import React, { useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
-
-import './About.css'
-
-const About = () => {
-
-  const src1 = "../Screenshot (114).png"
-  const src2 = "../Screenshot (116).png"
-  const src3 = "../Screenshot (115).png"
-  const src4 = "../Screenshot (117).png"
-    
-
-  const left = ()=>{
-    const scrolldiv = document.getElementById('divSlide');
-    setTimeout(()=>{
-      scrolldiv.appendChild(scrolldiv.firstElementChild);
-    },400);
-    
- 
-
-
-
-  }
-
-  const right = ()=>{
-    const scrolldiv = document.getElementById('divSlide');
-    setTimeout(()=>{
-      scrolldiv.insertBefore(scrolldiv.lastElementChild, scrolldiv.firstElementChild);
-    },400);
- 
-    
-  }
-
-
-
+const AboutUs = () => {
   return (
-    <div id='about'>
-      <h1 id='abouth1'>About us</h1>
-       <div id='div_wwa'>
-       <div id='Who_We_Are'>
-       
-        <h2>Who We Are</h2>
-          <p className='p1'>
-            We are an Small Medium Enterprise (<b>SME</b>) consulting house and insights-led through strategic research.
-            We follow a risk-based approach which is key as adequate management of risk enforces sustainability within SMEs.
-             <br/>
-             <br/>
-            Our services<b>:</b><br/>
-            Design, facilitate and monitoring of SME business process and risk management development programs
-            Strategic consulting and coaching
-            SME training on key business concepts
-            Digital marketing services and analytics through our supporting agency Thee Anchor
-
+    <section className="about-us-section">
+      <div className="about-us-content">
+        <h1 className="about-us-heading">Who We Are</h1>
+        <div className="about-us-image">
+          <img src="../../assets/person-using-laptop.jpeg" alt="Person using laptop" />
+        </div>
+        <div className="about-us-description">
+          <p>
+            Legacy Redefined is a consulting "one-stop" house for existing and upcoming small micro and medium enterprises (SMMEs). Legacy Redefined was founded in 2022 by Lesego Khoele, a passionate young lady who was raised in a business-oriented family. Having first-hand exposure to the SMME sector as well as observing the various struggles these types of businesses endure due to lack of defined processes, risk management, and internal controls ushered the birth of Legacy Redefined. The one-stop consulting house is a platform that assists SMMEs to improve their business knowledge and processes through the integration of risk into their core business processes and the implementation of key controls. We also provide risk-based business development programs and training on key business concepts.
           </p>
-          
-       </div>
-
-       <div id='Our_Vision'>
-        <h2>Our Vision</h2>
-        <p className='p1'>
-        We aim to witness enduring businesses supported by efficient processes, innovative Information Technology solutions, and timeless brands.
-        We motivate organisations to integrate strong processes, backed by resilient Information Technology solutions and infused with creativity to build brands that guarantee top-of-mind awareness
-        </p>
-
-       </div>
-       
-       <div id='Our_Team'>
-        <h2>Our Team</h2>
-       </div>
-     </div>
-
-     <button className="errow" id='leftE' onClick={left}><FontAwesomeIcon icon={faChevronLeft} color="grey" size="4x"/></button>
-     <button className="errow" id='rightE' onClick={right}><FontAwesomeIcon  icon={faChevronRight} color="grey" size="4x"/></button>
-     <div id='divSlide' className="divSlide" >
-              
-               <div id='M2' className="members slide">
-               <img src={src2} alt='Karabo' />
-               <div>
-                <p className="pNames">Karabo Kgomanyane</p>
-                <p className="pRole">Data-Led Marketing Specialist <br/>Thee Anchor MD & Founder</p>
-                </div>
-               </div>
-
-               <div id='M1' className="members slide">
-                  <img src={src1} alt='Lesego' />
-                 <div>
-                  <p className="pNames">Lesego Khoele (CIA),Mphil</p>
-                  <p className="pRole">Md and Founder<br/> SMME Business Developer</p>
-                  </div>
-               </div>
-
-               <div id='M3' className="members slide">
-               <img src={src3} alt='Mphoma' />
-                <div>
-                <p className="pNames">Mphoma Putsoane </p>
-                <p className="pRole">Business Accounting<br/>Development Specialist</p>
-                </div>
-               </div>
-
-               <div id='M4' className="members slide">
-               <img src={src4} alt='Boipelo' />
-                <div>
-                <p className="pNames">Boipelo Maringa </p>
-                <p className="pRole">Business and Personal <br/>Finance Specialist</p>
-                </div>
-               </div>
-          </div>
-    </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default About;
-
+export default AboutUs;

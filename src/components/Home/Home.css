@@ -1,26 +1,198 @@
-/* Styling for the content */
-.content {
-  background-color: #000000; /* Black background */
-  color: #ffd700; /* Gold text color */
-  padding: 200px 40px;
-  margin: 40px;
-  font-family: Arial, sans-serif; /* Modern font */
+/* Hero Section */
+.hero-section {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center; /* Center text content */
+  background-color: #000;
+  background-image: url('../../assets/hero-bg.jpeg'); /* Replace with your background */
+  background-position: center;
+  background-size: cover;
+  color: white;
 }
 
-/* Styling for the H1 heading */
-.H1 {
-  font-size: 8em;
+.hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 4.5em;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #ffd700;
+  background-color: transparent;
+  border: 2px solid #ffd700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffd700;
+  color: #000;
+}
+
+/* Video Section */
+.video-section {
+  padding: 100px 20px;
+  background-color: #111;
+  color: white;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 40px;
+}
+
+.video-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Vision and Mission Section */
+.vision-mission-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  color: white;
+  padding: 100px 20px;
+}
+
+.vision-mission-content {
+  width: 45%;
+  text-align: left;
+}
+
+.vision-mission-content h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
   margin-bottom: 20px;
 }
 
-/* Styling for paragraphs */
-.content p {
-  font-size: 1.2em;
+.vision-mission-content p {
+  font-size: 1.2rem;
   line-height: 1.6;
-  max-width: 800px; /* Limit the width for better readability */
+}
+
+/* Clients Section */
+.clients-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+  position: relative; /* For positioning the arrows */
+}
+
+.clients-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.client-logo {
+  width: 150px;
+  height: auto;
+  border: none; /* Remove any default border */
+}
+
+/* Arrows */
+.clients-section::before, .clients-section::after {
+  content: '\f104'; /* Unicode for left arrow from FontAwesome */
+  font-family: "FontAwesome"; /* Reference to FontAwesome */
+  font-size: 2rem;
+  color: #888;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.clients-section::before {
+  content: '\f104'; /* Left arrow */
+  left: 10px;
+}
+
+.clients-section::after {
+  content: '\f105'; /* Right arrow */
+  right: 10px;
+}
+
+.clients-section::before:hover, .clients-section::after:hover {
+  color: #000; /* Darker color on hover */
+}
+
+/* Video Section */
+.video-section {
+  padding: 100px 20px;
+  background-color: #111;
+  color: white;
   text-align: center;
 }
+
+.video-section h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 40px;
+}
+
+.video-placeholder-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px; /* Space between video and placeholder text */
+}
+
+.video-box {
+  flex: 1;
+  max-width: 50%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.placeholder-text {
+  flex: 1;
+  text-align: left;
+  max-width: 45%;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.placeholder-text h3 {
+  font-size: 1.8rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.placeholder-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+

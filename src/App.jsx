@@ -2,9 +2,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Courses from './components/Courses/Courses';
 import AboutUs from './components/About/AboutUs';
+import MyBlogs from './components/Blogs/MyBlogs.jsx'; 
 import Navbar from './components/Navbar/Navbar';
 import Insights from './components/Insights/Insights';
-import './App.css'
+import Footer from './components/Footer/Footer.jsx'; 
+import './App.css';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/insights" element={<Insights />} />
+        <Route path="/blogs" element={<MyBlogs />} /> {/* My Blogs route */}
       </Routes>
+      <Footer /> 
     </Router>
   );
 }

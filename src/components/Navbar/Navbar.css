@@ -1,36 +1,41 @@
+/* General Navbar styling */
 .navbar {
-  background-color: #001f3f; /* Dark blue background */
-  height: 60px; /* Adjusted height for a sleek look */
+  background-color: #000000; /* Black background to match image */
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed; /* Keep navbar fixed at the top */
+  position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000; /* Ensure it stays above other content */
-  padding: 0 0; /* Adjust padding as needed */
+  z-index: 1000;
+  padding: 0;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.5);
 }
-
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px; /* Max width to limit navbar width */
-  margin: 0 auto; /* Center align the navbar */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
+.logo-image {
+  height: 50px;
+  width: auto;
+}
+
 .menu-icon {
-  display: none; /* Hide menu icon by default */
-  font-size: 1.8rem;
+  display: none;
+  font-size: 2rem;
   color: white;
   cursor: pointer;
 }
@@ -49,18 +54,27 @@
 }
 
 .navbar-item a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
-  padding: 0.5rem 1rem; /* Added padding for better clickability */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
 }
 
 .navbar-item a:hover {
-  color: #ffd700; /* Gold color on hover for a modern look */
+  color: #ffd700; /* Gold hover effect */
 }
 
-/* Media query for smaller screens */
+/* Search bar */
+.search-bar input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Responsive Navbar */
 @media (max-width: 768px) {
   .menu-icon {
     display: flex;
@@ -69,11 +83,11 @@
   .navbar-list {
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 60px);
-    background-color: #001f3f;
+    height: calc(100vh - 80px);
+    background-color: #000;
     transition: left 0.3s ease;
   }
 
@@ -82,7 +96,6 @@
   }
 
   .navbar-item {
-    margin: 1rem 0; /* Adjusted margin */
-    text-align: center; /* Center align items */
+    margin: 1rem 0;
   }
 }
