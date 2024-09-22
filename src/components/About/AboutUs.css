@@ -1,48 +1,42 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* About Us Section */
-  .about-us-section {
-    padding: 100px 20px;
-  }
-  
-  .about-us-content {
-    text-align: center;
-  }
-  
-  .about-us-heading {
-    font-size: 3em;
-    font-weight: bold;
-    color: #ffd700;
-    margin-bottom: 40px;
-  }
-  
-  .about-us-image {
-    background-color: #333;
-    padding: 20px;
-    margin-bottom: 50px;
-  }
-  
-  .about-us-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  .about-us-description {
-    background-color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    color: #000;
-  }
-  
-  .about-us-description p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #424141;
+}
+
+/* About Us Section */
+.about-us-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content */
+  text-align: center; /* Center the text */
+}
+
+.about-us-image {
+  background-color: #424141; /* Set the background color to grey */
+  padding: 0px; /* Add some padding around the image */
+  margin-bottom: 50px;
+  border-radius: 8px; /* Optional: round the corners */
+}
+
+.about-us-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: round the corners of the image */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-us-description {
+  width: 100%; /* Fill the entire screen width */
+  background-color: #fff; /* Keep the description background white */
+  color: #000;
+  padding: 120px 20px; /* Adjust top and bottom padding as needed */;
+}
+
+.about-us-description p {
+  font-size: 1rem; /* Decrease the font size by 20% */
+  line-height: 1.6;
+  color: #000;
+}

@@ -50,14 +50,10 @@ const Home = () => {
           <img src={visionImage} alt="Vision and Mission" />
         </div>
         <div className="vision-mission-content">
-          <div>
             <h2>VISION</h2>
             <p>We strive to assist in establishing sound business processes underpinned by rigorous risk management. By thoroughly integrating these elements, long-term sustainability will be achieved.</p>
-          </div>
-          <div>
             <h2>MISSION</h2>
             <p>We intend on providing our clients with expert guidance and support in developing robust business processes and comprehensive risk management strategies. Our dedicated approach ensures that our clients achieve operational excellence and long-term sustainability.</p>
-          </div>
         </div>
       </div>
 

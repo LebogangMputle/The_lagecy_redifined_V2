@@ -75,8 +75,8 @@ video {
 .vision-mission-section {
   display: flex; /* Use flexbox for layout */
   background-color: #0f0f0f;
-  align-items: center; /* Center items vertically */
-  padding: 80px 50px; /* Add padding if needed */
+  align-items: stretch; /* Ensure both items stretch to the same height */
+  padding: 0px 10px; /* Adjust padding if needed */
 }
 
 .vision-mission-image {
@@ -94,21 +94,16 @@ video {
   margin-left: 20px; /* Space between image and text */
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Stack content vertically */
-  justify-content: center; /* Center content vertically */
+  justify-content: center; /* Center content vertically within the height */
+  background-color: rgba(15, 15, 15, 0.8); /* Optional: add background for contrast */
+  padding: 20px; /* Optional: padding for text */
 }
 
-.home .vision-mission-content h2 {
-  margin: 0; /* Remove default margin */
-  color: #857312;
-  font-size: 1rem; /* Adjust the font size as needed */
-}
-
-.home .vision-mission-content p {
-  margin: 0; /* Remove spacing between paragraphs */
+p {
   color: white;
-  font-size: 1rem; /* Adjust the font size for the paragraph */
+  font-size: 0.8rem;
+  margin: 5px 0; /* Adjust margin to control spacing */
 }
-
 
 
 
