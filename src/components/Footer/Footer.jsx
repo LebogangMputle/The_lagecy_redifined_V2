@@ -36,6 +36,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>COPYRIGHT © 2024 THEE ANCHOR PTY LTD. ALL RIGHTS RESERVED.</p>
+        <p>FOLLOW US ON SOCIAL MEDIA</p>
         <div className="footer-socials">
           <a href="#"><i className="fab fa-facebook-f"></i></a>
           <a href="#"><i className="fab fa-linkedin-in"></i></a>

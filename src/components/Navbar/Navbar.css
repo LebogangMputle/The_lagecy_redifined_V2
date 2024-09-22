@@ -61,7 +61,7 @@
 
 /* Active link with double line effect */
 .navbar-item .active {
-  color: #ffd700; /* Gold color for active link */
+  color: #857312;/* Gold color for active link */
 }
 
 .navbar-item .active::before,
@@ -70,7 +70,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #ffd700;
+  background-color: white;;
   position: absolute;
   left: 0;
 }
@@ -85,7 +85,7 @@
 
 /* Add a double line under the active link */
 .active-link {
-  color: #ffd700; /* Keep the text color gold for the active link */
+  color: #857312; /* Keep the text color gold for the active link */
   position: relative;
 }
 
@@ -96,7 +96,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #fff; /* Change lines to white */
+  background-color: #857312; /* Change lines to white */
 }
 
 .active-link::before {

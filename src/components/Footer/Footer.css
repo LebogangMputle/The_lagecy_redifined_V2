@@ -1,41 +1,30 @@
-/* Footer styles */
-.footer-logo ,h2 ,h1 {
-  font-size: 1.8rem;
-  color: white;
-  margin-bottom: 15px;
-}
-.footer {
-  background-color: #111;
-  color: #888;
-}
-
 .footer-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* Space out columns evenly */
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 0; /* Optional padding for better spacing */
 }
 
 .footer-section {
-  flex: 1;
-  margin: 0 20px;
-  text-align: left; /* Align text to the left */
+  flex: 1; /* Each section takes up equal space */
+  margin: 0 20px; /* Adjust margin for spacing between columns */
+  text-align: left; /* Ensure all text is aligned left */
 }
 
+/* Other styles remain unchanged */
+.footer-logo, h2, h1 {
+  font-size: 1.8rem;
+  color: rgb(201, 192, 192);
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
 
 .footer-description {
   font-size: 0.9rem;
   color: #bbb;
   line-height: 1.4;
-}
-
-
-.footer-section {
-  color: #ffd700;
-  font-size: 1.8rem; /* Match the logo size */
-  line-height: 1; /* Ensure consistent height */
 }
 
 .footer-section ul {
@@ -60,16 +49,22 @@
 }
 
 .footer-section ul li a:hover {
-  color: #ffd700;
+  color: #857312;
 }
 
 .footer-bottom {
-  background-color: #000;
-  padding: 20px 0;
-  text-align: center;
+  padding: 10px;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between copyright and socials */
+  align-items: center; /* Center items vertically */
   font-size: 0.85rem;
   border-top: 1px solid #555;
   margin-top: 30px;
+}
+
+.footer-socials {
+  display: flex; /* Ensure social icons are displayed in a row */
+  align-items: center; /* Center icons vertically */
 }
 
 .footer-socials a {
@@ -80,5 +75,5 @@
 }
 
 .footer-socials a:hover {
-  color: #ffd700;
+  color: #857312;
 }

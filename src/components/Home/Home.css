@@ -19,7 +19,7 @@
 .hero-title {
   font-size: 4.5em;
   font-weight: bold;
-  color: #ffd700;
+  color: #857312;
   margin-bottom: 30px;
 }
 
@@ -32,15 +32,15 @@
 .btn {
   padding: 15px 30px;
   font-size: 1.2em;
-  color: #ffd700;
+  color: #857312;
   background-color: transparent;
-  border: 2px solid #ffd700;
+  border: 2px solid #857312;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #ffd700;
+  background-color: #857312;
   color: #000;
 }
 
@@ -54,7 +54,7 @@
 
 .video-section h2 {
   font-size: 2.5rem;
-  color: #ffd700;
+  color: #857312;;
   margin-bottom: 40px;
 }
 
@@ -74,7 +74,7 @@ video {
 .vision-mission-section {
   display: flex;
   justify-content: space-around;
-  background-color: #000;
+  background-color: #383535;
   color: white;
   padding: 100px 20px;
 }
@@ -86,7 +86,7 @@ video {
 
 .vision-mission-content h2 {
   font-size: 2.5rem;
-  color: #ffd700;
+  color: #857312;;
   margin-bottom: 20px;
 }
 
@@ -105,7 +105,7 @@ video {
 
 .clients-section h2 {
   font-size: 2.5rem;
-  color: #ffd700; /* Gold color */
+  color: #857312; /* Gold color */
   text-align: center;
   margin: 0 auto 40px; /* Center the heading with auto margins */
   display: inline-block; /* Ensures heading is treated as block-level element */
@@ -160,7 +160,7 @@ video {
 
 .video-section h2 {
   font-size: 2.5rem;
-  color: #ffd700;
+  color: #857312;
   margin-bottom: 40px;
 }
 
@@ -195,7 +195,7 @@ video {
 
 .placeholder-text h3 {
   font-size: 1.8rem;
-  color: #ffd700;
+  color: #857312;
   margin-bottom: 20px;
 }
 
