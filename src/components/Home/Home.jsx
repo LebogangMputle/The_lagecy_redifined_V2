@@ -5,6 +5,7 @@ import absaLogo from '../../assets/absa-logo.png';
 import xmsLogo from '../../assets/xms-logo.webp';
 import companyLogo from '../../assets/company-logo.png';
 import visionImage from '../../assets/feature-Black-women-work.jpg'; // Add this line
+import Homelogo from '../../assets/Homelogo.png'; // Import the logo
 
 const Home = () => {
   return (
@@ -34,12 +35,7 @@ const Home = () => {
             </video>
           </div>
           <div className="placeholder-text">
-            <h3>Placeholder Title</h3>
-            <p>
-              This is placeholder text next to the video. You can add more
-              detailed information about the video or your company's mission, values,
-              or services. Feel free to replace this with any relevant content in the future.
-            </p>
+            <img src={Homelogo} alt="Legacy Redefined Logo" className="placeholder-logo" /> {/* Replace text with logo */}
           </div>
         </div>
       </div>
@@ -50,10 +46,10 @@ const Home = () => {
           <img src={visionImage} alt="Vision and Mission" />
         </div>
         <div className="vision-mission-content">
-            <h2>VISION</h2>
-            <p>We strive to assist in establishing sound business processes underpinned by rigorous risk management. By thoroughly integrating these elements, long-term sustainability will be achieved.</p>
-            <h2>MISSION</h2>
-            <p>We intend on providing our clients with expert guidance and support in developing robust business processes and comprehensive risk management strategies. Our dedicated approach ensures that our clients achieve operational excellence and long-term sustainability.</p>
+          <h2>VISION</h2>
+          <p>We strive to assist in establishing sound business processes underpinned by rigorous risk management. By thoroughly integrating these elements, long-term sustainability will be achieved.</p>
+          <h2>MISSION</h2>
+          <p>We intend on providing our clients with expert guidance and support in developing robust business processes and comprehensive risk management strategies. Our dedicated approach ensures that our clients achieve operational excellence and long-term sustainability.</p>
         </div>
       </div>
 

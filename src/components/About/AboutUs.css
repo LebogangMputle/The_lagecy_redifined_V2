@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #424141;
+  background: #20201f;
 }
 
 /* About Us Section */
@@ -15,7 +15,7 @@ body {
 }
 
 .about-us-image {
-  background-color: #424141; /* Set the background color to grey */
+  background-color: #20201f; /* Set the background color to grey */
   padding: 0px; /* Add some padding around the image */
   margin-bottom: 50px;
   border-radius: 8px; /* Optional: round the corners */

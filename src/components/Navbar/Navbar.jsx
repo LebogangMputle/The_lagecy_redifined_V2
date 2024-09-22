@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.jpeg'; // Replace with the actual path to your logo
+import Homelogo from '../../assets/Homelogo.png'; // Replace with the actual path to your logo
 import './Navbar.css';
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <NavLink to="/" className="navbar-logo">
-          <img src={logo} alt="Logo" className="logo-image" />
+          <img src={Homelogo} alt="Logo" className="logo-image" />
         </NavLink>
         <div className="menu-icon" onClick={handleMenuToggle}>
           &#9776; {/* Hamburger menu icon */}

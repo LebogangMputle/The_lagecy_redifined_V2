@@ -12,7 +12,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #383837; /* Adjust background color as needed */
+  background-color: #20201f; /* Adjust background color as needed */
   padding: 0px 0px; /* Reduce padding for a more compact navbar */
 }
 
@@ -72,7 +72,7 @@ section {
 /* Footer Section */
 .footer {
   padding: 0px; /* Reduce padding for the footer */
-  background-color: #302f2f;
+  background-color: #20201f;
   color: white;
   text-align: center;
   font-size: 0.85rem; /* Reduced font size for footer */

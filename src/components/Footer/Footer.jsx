@@ -1,18 +1,19 @@
-import './Footer.css';  // You can create the style below in a separate CSS file
+import './Footer.css'; // You can create the style below in a separate CSS file
+import Homelogo from '../../assets/Homelogo.png'; // Import the logo
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section about">
-          <h1>Legacy Redefined</h1>
+          <img src={Homelogo} alt="Legacy Redefined Logo" className="footer-logo" /> {/* Replace h1 with image */}
           <p className="footer-description">
             Legacy Redefined is a consulting "one stop" house for existing and upcoming small, micro, and medium enterprises (SMMEs). Legacy Redefined was founded in 2022 by Lesego Khoele, a passionate young lady who was raised in a business-oriented family.
           </p>
         </div>
 
         <div className="footer-section about">
-          <h1 >NAVIGATE SITE</h1>
+          <h1>NAVIGATE SITE</h1>
           <ul className="footer-description">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
