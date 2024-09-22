@@ -99,8 +99,16 @@ video {
 .clients-section {
   padding: 50px 20px;
   background-color: #fff;
-  text-align: center;
+  text-align: center; /* Ensure all content is centered */
   position: relative; /* For positioning the arrows */
+}
+
+.clients-section h2 {
+  font-size: 2.5rem;
+  color: #ffd700; /* Gold color */
+  text-align: center;
+  margin: 0 auto 40px; /* Center the heading with auto margins */
+  display: inline-block; /* Ensures heading is treated as block-level element */
 }
 
 .clients-logos {

@@ -5,15 +5,15 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section about">
-          <h1 className="footer-logo">Legacy Redefined</h1>
+          <h1>Legacy Redefined</h1>
           <p className="footer-description">
             Legacy Redefined is a consulting "one stop" house for existing and upcoming small, micro, and medium enterprises (SMMEs). Legacy Redefined was founded in 2022 by Lesego Khoele, a passionate young lady who was raised in a business-oriented family.
           </p>
         </div>
 
-        <div className="footer-section links">
-          <h2>NAVIGATE SITE</h2>
-          <ul>
+        <div className="footer-section about">
+          <h1 >NAVIGATE SITE</h1>
+          <ul className="footer-description">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="/services">Our Services</a></li>
@@ -24,8 +24,8 @@ const Footer = () => {
         </div>
 
         <div className="footer-section contact">
-          <h2>CONTACT US</h2>
-          <ul>
+          <h1>CONTACT US</h1>
+          <ul className="footer-description">
             <li><i className="fas fa-phone"></i> +27 78 349 6649</li>
             <li><i className="fas fa-envelope"></i> info@legacyredefined.co.za</li>
             <li><i className="fas fa-globe"></i> www.legacyredefined.co.za</li>

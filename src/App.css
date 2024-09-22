@@ -3,8 +3,101 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif; /* Adjust font-family as needed */
+  font-size: 14px; /* Reduced base font size for the entire app */
 }
 
 .main-content {
   padding-top: 60px; /* Matches the navbar height */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000; /* Adjust background color as needed */
+  padding: 10px 20px; /* Reduce padding for a more compact navbar */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+}
+
+.navbar a {
+  color: #ffd700; /* Adjust link color */
+  text-decoration: none;
+  font-size: 0.9rem; /* Reduced font size for navbar links */
+  padding: 10px 15px; /* Adjust padding for navbar items */
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+/* General Section Styling */
+section {
+  padding: 20px 15px; /* Reduced padding for sections */
+  margin-bottom: 20px; /* Reduce space below sections */
+  font-size: 0.95rem; /* Reduced font size for the app */
+}
+
+/* Clients Section */
+.clients-section {
+  padding: 20px 20px; /* Reduced padding for the clients section */
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 0.9rem; /* Smaller font size for section text */
+}
+
+.clients-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Reduced gap between logos */
+}
+
+.client-logo {
+  width: 120px; /* Smaller logo size */
+  height: auto;
+  border: none; /* Remove any default border */
+}
+
+/* Footer Section */
+.footer {
+  padding: 20px 20px; /* Reduce padding for the footer */
+  background-color: #000;
+  color: white;
+  text-align: center;
+  font-size: 0.85rem; /* Reduced font size for footer */
+}
+
+/* Hero Section */
+.hero-title {
+  font-size: 3.5em; /* Reduce hero title size */
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px; /* Adjust padding */
+  font-size: 1rem; /* Reduced button font size */
+}
+
+/* Video Section */
+.video-section h2 {
+  font-size: 2rem; /* Reduced video section title size */
+}
+
+.vision-mission-section h2 {
+  font-size: 2rem; /* Reduced title size for vision/mission section */
+}
+
+.vision-mission-section p {
+  font-size: 1rem; /* Reduced paragraph font size */
 }
