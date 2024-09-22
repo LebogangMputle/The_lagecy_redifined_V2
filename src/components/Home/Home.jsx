@@ -1,9 +1,10 @@
 import './Home.css';
 import sampleVideo from "../../assets/video.mp4";
-import nydaLogo from '../../assets/nyda-logo.png'; // Correct paths for the logos
+import nydaLogo from '../../assets/nyda-logo.png';
 import absaLogo from '../../assets/absa-logo.png';
 import xmsLogo from '../../assets/xms-logo.webp';
 import companyLogo from '../../assets/company-logo.png';
+import visionImage from '../../assets/feature-Black-women-work.jpg'; // Add this line
 
 const Home = () => {
   return (
@@ -24,7 +25,7 @@ const Home = () => {
 
       {/* Video Section with Placeholder Text */}
       <div className="video-section">
-        <h2>Video Presentation</h2>
+        <h2>The Story</h2>
         <div className="video-placeholder-container">
           <div className="video-box">
             <video controls>
@@ -45,13 +46,18 @@ const Home = () => {
 
       {/* Vision and Mission Section */}
       <div className="vision-mission-section">
-        <div className="vision-mission-content">
-          <h2>VISION</h2>
-          <p>We strive to assist in establishing sound business processes underpinned by rigorous risk management. By thoroughly integrating these elements, long-term sustainability will be achieved.</p>
+        <div className="vision-mission-image">
+          <img src={visionImage} alt="Vision and Mission" />
         </div>
         <div className="vision-mission-content">
-          <h2>MISSION</h2>
-          <p>We intend on providing our clients with expert guidance and support in developing robust business processes and comprehensive risk management strategies. Our dedicated approach ensures that our clients achieve operational excellence and long-term sustainability.</p>
+          <div>
+            <h2>VISION</h2>
+            <p>We strive to assist in establishing sound business processes underpinned by rigorous risk management. By thoroughly integrating these elements, long-term sustainability will be achieved.</p>
+          </div>
+          <div>
+            <h2>MISSION</h2>
+            <p>We intend on providing our clients with expert guidance and support in developing robust business processes and comprehensive risk management strategies. Our dedicated approach ensures that our clients achieve operational excellence and long-term sustainability.</p>
+          </div>
         </div>
       </div>
 

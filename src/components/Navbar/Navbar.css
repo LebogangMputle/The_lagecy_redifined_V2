@@ -9,17 +9,17 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  padding: 0;
+  padding: 0 20px; /* Add padding on the sides */
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Keep space between logo and nav items */
   align-items: center;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px; /* Maintain max width */
+  margin: 0 auto; /* Center the navbar within the page */
 }
 
 .navbar-logo {
@@ -61,7 +61,7 @@
 
 /* Active link with double line effect */
 .navbar-item .active {
-  color: #857312;/* Gold color for active link */
+  color: #857312; /* Gold color for active link */
 }
 
 .navbar-item .active::before,
@@ -70,7 +70,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: white;;
+  background-color: white;
   position: absolute;
   left: 0;
 }
@@ -96,7 +96,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #857312; /* Change lines to white */
+  background-color: #857312; /* Change lines to gold */
 }
 
 .active-link::before {
@@ -114,8 +114,8 @@
   color: white;
   cursor: pointer;
   position: absolute; /* Absolute positioning */
-  right: 50px; /* Position it to the top-right */
-  top: 20px;   /* Align with the top */
+  right: 20px; /* Adjust to align with padding */
+  top: 20px; /* Align with the top */
 }
 
 /* Responsive Navbar */

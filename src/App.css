@@ -13,7 +13,7 @@ body {
 /* Navbar */
 .navbar {
   background-color: #383837; /* Adjust background color as needed */
-  padding: 10px 20px; /* Reduce padding for a more compact navbar */
+  padding: 0px 0px; /* Reduce padding for a more compact navbar */
 }
 
 .navbar ul {
@@ -33,7 +33,7 @@ body {
   color: #857312; /* Adjust link color */
   text-decoration: none;
   font-size: 0.9rem; /* Reduced font size for navbar links */
-  padding: 10px 15px; /* Adjust padding for navbar items */
+  padding: 10px 25px; /* Adjust padding for navbar items */
 }
 
 .navbar a:hover {

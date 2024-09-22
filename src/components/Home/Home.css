@@ -35,6 +35,7 @@
   color: #857312;
   background-color: transparent;
   border: 2px solid #857312;
+  border-radius: 15px; /* Adjust this value for roundness */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -47,7 +48,7 @@
 /* Video Section */
 .video-section {
   padding: 100px 20px;
-  background-color: #111;
+  background-color: #917a7a;
   color: white;
   text-align: center;
 }
@@ -72,28 +73,45 @@ video {
 
 /* Vision and Mission Section */
 .vision-mission-section {
-  display: flex;
-  justify-content: space-around;
-  background-color: #383535;
-  color: white;
-  padding: 100px 20px;
+  display: flex; /* Use flexbox for layout */
+  background-color: #0f0f0f;
+  align-items: center; /* Center items vertically */
+  padding: 80px 50px; /* Add padding if needed */
+}
+
+.vision-mission-image {
+  flex: 1; /* Allow the image to take up space */
+  text-align: center; /* Center the image */
+}
+
+.vision-mission-image img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .vision-mission-content {
-  width: 45%;
-  text-align: left;
+  flex: 1; /* Allow the text to take up space */
+  margin-left: 20px; /* Space between image and text */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
 }
 
-.vision-mission-content h2 {
-  font-size: 2.5rem;
-  color: #857312;;
-  margin-bottom: 20px;
+.home .vision-mission-content h2 {
+  margin: 0; /* Remove default margin */
+  color: #857312;
+  font-size: 1rem; /* Adjust the font size as needed */
 }
 
-.vision-mission-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+.home .vision-mission-content p {
+  margin: 0; /* Remove spacing between paragraphs */
+  color: white;
+  font-size: 1rem; /* Adjust the font size for the paragraph */
 }
+
+
+
+
 
 /* Clients Section */
 .clients-section {
@@ -162,6 +180,7 @@ video {
   font-size: 2.5rem;
   color: #857312;
   margin-bottom: 40px;
+  padding-left: 600px;
 }
 
 .video-placeholder-container {

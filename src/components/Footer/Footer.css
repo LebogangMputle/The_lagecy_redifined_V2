@@ -40,7 +40,7 @@
 
 .footer-section ul li i {
   margin-right: 10px;
-  color: #c0bfb8;
+  color: #857312;
 }
 
 .footer-section ul li a {
@@ -53,7 +53,7 @@
 }
 
 .footer-bottom {
-  padding: 10px;
+  padding: 10px 90px;
   display: flex; /* Use flexbox for alignment */
   justify-content: space-between; /* Space between copyright and socials */
   align-items: center; /* Center items vertically */
