@@ -1,44 +1,84 @@
 /* My Blogs Page Styling */
 .blogs-section {
-    padding: 50px;
-    background-color: #f9f9f9;
-  }
-  
-  .blogs-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #ffd700; /* Your preferred gold color */
-    margin-bottom: 40px;
-  }
-  
-  .blogs-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-  }
-  
-  .blog-card {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .blog-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .blog-card h3 {
-    margin: 20px 0 10px;
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .blog-card p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
+  padding: 50px;
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+.blogs-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #857312; /* Use the color as per your request */
+  margin-bottom: 40px;
+}
+
+/* Grid Styling for Blog Cards */
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 30px;
+  justify-content: center; /* Center the blogs */
+}
+
+.blog-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Hover animation */
+  text-align: left; /* Align content to the left */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio and cover space */
+  border-radius: 8px;
+}
+
+/* Blog Title Styling */
+.blog-card h3 {
+  margin: 20px 0 10px;
+  font-size: 1.4rem;
+  color: #333;
+  text-transform: uppercase; /* Make title uppercase */
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  text-align: left; /* Align title to the left */
+}
+
+/* Blog Description Styling */
+.blog-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: justify; /* Justify the text for even alignment */
+  margin-bottom: 20px;
+  text-align: left; /* Align description to the left */
+}
+
+/* Read More Button */
+.read-more-button {
+  font-size: 1rem;
+  color: #857312; /* Same color for Read More */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  border: none; /* Remove border */
+  background: none; /* Remove any button styling */
+  padding: 0; /* Remove padding */
+  text-align: left; /* Align to the left */
+}
+
+.read-more-button:hover {
+  text-decoration: underline;
+}
+
+.read-more-button:after {
+  content: ' →'; /* Add arrow icon */
+  font-size: 1.2rem;
+}
