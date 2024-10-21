@@ -134,55 +134,94 @@ p {
 .clients-section {
   padding: 50px 20px;
   background-color: #fff;
-  text-align: center; /* Ensure all content is centered */
+  text-align: center;
   position: relative; /* For positioning the arrows */
 }
 
 .clients-section h2 {
   font-size: 2.5rem;
   color: #857312; /* Gold color */
-  text-align: center;
-  margin: 0 auto 40px; /* Center the heading with auto margins */
-  display: inline-block; /* Ensures heading is treated as block-level element */
+  margin-bottom: 40px;
 }
+
+/* Wrapper to hold the carousel */
+.carousel-wrapper {
+  position: relative;
+  width: 200px; /* Ensure only one logo is visible at a time */
+  margin: 0 auto;
+  overflow: hidden; /* Hide any overflow */
+  display: flex; /* Flex container */
+  justify-content: center; /* Center the logos */
+  align-items: center; /* Vertically center */
+  height: 150px; /* Set the height to align with the logo size */
+}
+
 
 .clients-logos {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
+  justify-content: space-between; /* Ensure logos are horizontally centered */
+  align-items: center; /* Center logos vertically */
+  transition: transform 0.5s ease-in-out;
+  width: max-content; /* Adjust width based on content to keep it centered */
 }
 
 .client-logo {
-  width: 150px;
-  height: auto;
-  border: none; /* Remove any default border */
+  width: 200px;
+  height: 150px; /* Fixed size */
+  object-fit: contain; /* Ensure logos fit within the container */
+  transition: transform 0.3s ease;
 }
 
-/* Arrows */
-.clients-section::before, .clients-section::after {
-  content: '\f104'; /* Unicode for left arrow from FontAwesome */
-  font-family: "FontAwesome"; /* Reference to FontAwesome */
-  font-size: 2rem;
-  color: #888;
+/* Arrow Buttons */
+.carousel-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
   cursor: pointer;
+  padding: 10px;
+  z-index: 1;
 }
 
-.clients-section::before {
-  content: '\f104'; /* Left arrow */
+.left-arrow {
   left: 10px;
 }
 
-.clients-section::after {
-  content: '\f105'; /* Right arrow */
+.right-arrow {
   right: 10px;
 }
 
-.clients-section::before:hover, .clients-section::after:hover {
-  color: #000; /* Darker color on hover */
+.carousel-arrow:hover {
+  background-color: #857312;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .client-logo {
+    width: 150px; /* Adjust size for small screens */
+    height: 120px;
+  }
+  
+  .carousel-wrapper {
+    width: 150px; /* Adjust wrapper size for smaller screens */
+    height: 120px; /* Adjust height */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .client-logo {
+    width: 180px;
+    height: 130px;
+  }
+  
+  .carousel-wrapper {
+    width: 180px;
+    height: 130px;
+  }
 }
 
 /* Video Section */
@@ -239,4 +278,3 @@ video {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-

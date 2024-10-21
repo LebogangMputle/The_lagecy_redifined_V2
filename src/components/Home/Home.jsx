@@ -1,13 +1,32 @@
+import { useState } from 'react';
 import './Home.css';
 import sampleVideo from "../../assets/video.mp4";
 import nydaLogo from '../../assets/nyda-logo.png';
 import absaLogo from '../../assets/absa-logo.png';
 import xmsLogo from '../../assets/xms-logo.webp';
 import companyLogo from '../../assets/company-logo.png';
-import visionImage from '../../assets/feature-Black-women-work.jpg'; // Add this line
-import Homelogo from '../../assets/Homelogo.png'; // Import the logo
+import visionImage from '../../assets/feature-Black-women-work.jpg';
+import Homelogo from '../../assets/Homelogo.png';
 
 const Home = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const logos = [
+    { src: nydaLogo, alt: "NYDA Logo" },
+    { src: absaLogo, alt: "Absa Logo" },
+    { src: companyLogo, alt: "Thee Anchor Pty Ltd Logo" },
+    { src: xmsLogo, alt: "XMS Logo" }
+  ];
+
+  const totalSlides = logos.length;
+
+  const handleNext = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides); // Loop back to 0 after the last slide
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides); // Loop back to last after the first slide
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -56,11 +75,14 @@ const Home = () => {
       {/* Clients Section */}
       <div className="clients-section">
         <h2>Clients Who Trust Us</h2>
-        <div className="clients-logos">
-          <img src={nydaLogo} alt="NYDA" className="client-logo" />
-          <img src={absaLogo} alt="Absa" className="client-logo" />
-          <img src={companyLogo} alt="Company" className="client-logo" />
-          <img src={xmsLogo} alt="XMS" className="client-logo" />
+        <div className="carousel-wrapper">
+          <button className="carousel-arrow left-arrow" onClick={handlePrev}>←</button>
+          <div className="clients-logos" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+            {logos.map((logo, index) => (
+              <img key={index} src={logo.src} alt={logo.alt} className="client-logo" style={{ display: currentSlide === index ? 'block' : 'none' }} />
+            ))}
+          </div>
+          <button className="carousel-arrow right-arrow" onClick={handleNext}>→</button>
         </div>
       </div>
     </>

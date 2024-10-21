@@ -16,11 +16,10 @@ const Footer = () => {
           <h1>NAVIGATE SITE</h1>
           <ul className="footer-description">
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Our Services</a></li>
+            <li><a href="/aboutUs">About Us</a></li>
+            <li><a href="/ourServices">Our Services</a></li>
             <li><a href="/insights">Insights</a></li>
-            <li><a href="/blog">My Blog</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/blogs">My Blog</a></li>
           </ul>
         </div>
 
