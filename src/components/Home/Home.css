@@ -32,17 +32,19 @@
 .btn {
   padding: 15px 30px;
   font-size: 1.2em;
-  color: #857312;
-  background-color: transparent;
-  border: 2px solid #857312;
+  color: #fff; /* White text */
+  background-color: #857312; /* Gold background */
+  border: none; /* No borders */
   border-radius: 15px; /* Adjust this value for roundness */
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+  text-decoration: none; /* Removes underline */
 }
 
 .btn:hover {
-  background-color: #857312;
-  color: #000;
+  background-color: #fff; /* White background on hover */
+  color: #857312; /* Gold text on hover */
+  transform: translateY(-5px); /* Slight lift effect */
 }
 
 /* Video Section */
