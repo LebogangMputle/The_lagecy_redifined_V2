@@ -5,7 +5,7 @@ const ContactUs = () => {
   return (
     <div className="contact-us-section">
       <div className="contact-left">
-        <h2>CONNECT WITH US...</h2>
+        <h2>Reach Out</h2>
         <ul className="contact-info">
           <li><i className="fas fa-phone-alt"></i> +27 78 349 6649</li>
           <li><i className="fas fa-envelope"></i> info@legacyredefined.co.za</li>

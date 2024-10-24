@@ -282,3 +282,100 @@ video {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+
+/* General styles for mobile devices */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero-section {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .hero-title {
+    font-size: 2.5em; /* Reduce font size for mobile */
+    line-height: 1.2;
+  }
+
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1em; /* Adjust button size */
+    margin-bottom: 10px;
+  }
+
+  /* Video Section */
+  .video-section h2 {
+    font-size: 1.8rem; /* Reduce heading size */
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .video-placeholder-container {
+    flex-direction: column; /* Stack video and logo vertically */
+    align-items: center;
+  }
+
+  .video-box, .placeholder-text {
+    max-width: 100%;
+  }
+
+  /* Clients Section */
+  .carousel-wrapper {
+    width: 300px; /* Adjust width for mobile view */
+    height: 130px;
+  }
+
+  .client-logo {
+    width: 120px; /* Adjust logo size for smaller screens */
+    height: auto;
+  }
+
+  .carousel-arrow {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  /* Vision and Mission Section */
+  .vision-mission-section {
+    flex-direction: column; /* Stack image and text vertically */
+    padding: 50px 20px;
+  }
+
+  .vision-mission-image {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .vision-mission-content {
+    padding: 10px;
+  }
+
+  /* Reduce overall font size for paragraphs */
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Additional smaller mobile devices */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2em;
+  }
+
+  .btn {
+    font-size: 0.9em;
+  }
+
+  /* Further reduction in carousel size */
+  .carousel-wrapper {
+    width: 250px;
+  }
+
+  .client-logo {
+    width: 100px;
+  }
+}

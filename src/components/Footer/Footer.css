@@ -77,3 +77,25 @@
 .footer-socials a:hover {
   color: #857312;
 }
+
+/* Footer section fix for mobile */
+@media (max-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center; /* Center the footer content */
+  }
+
+  footer .footer-links {
+    margin: 10px 0; /* Add margin to prevent overlapping */
+  }
+
+  footer p {
+    font-size: 0.9rem; /* Reduce font size for mobile */
+  }
+
+  footer .social-icons {
+    margin-top: 10px;
+  }
+}
