@@ -37,9 +37,10 @@ const Home = () => {
             Business Process & <br />
             Risk Experts
           </h1>
-          <div className="hero-buttons">
-            <button className="btn services-btn">Our Services</button>
-          </div>
+          <div className="button-group">
+            <a href="/services" className="btn btn-services">Our Services</a>
+            <a href="/contact" className="btn btn-contact">Contact Us</a>
+        </div>
         </div>
       </div>
 

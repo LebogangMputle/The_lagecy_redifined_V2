@@ -16,7 +16,7 @@ const ContactUs = () => {
           <i className="fab fa-facebook"></i>
           <i className="fab fa-linkedin"></i>
           <i className="fab fa-instagram"></i>
-          <i className="fas fa-times"></i>
+          <i className="fab fa-twitter"></i>
         </div>
         <div className="map-container">
           <iframe
@@ -55,8 +55,10 @@ const ContactUs = () => {
           </select>
           <select required>
             <option value="">How did you hear from us?</option>
-            <option value="Social Media">Social Media</option>
-            <option value="Referral">Referral</option>
+            <option value="Social Media">Facebook</option>
+            <option value="Referral">X</option>
+            <option value="Referral">Instagram</option>
+            <option value="Referral">Linkedin</option>
           </select>
           <textarea placeholder="Questions or Comments..." rows="5"></textarea>
           <button type="submit">Submit</button>
