@@ -17,14 +17,14 @@ const Home = () => {
     { src: xmsLogo, alt: "XMS Logo" }
   ];
 
-  const totalSlides = logos.length;
+  const totalSlides = Math.ceil(logos.length / 2); // Ensure we calculate based on pairs
 
   const handleNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides); // Loop back to 0 after the last slide
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides); // Increment by one pair
   };
 
   const handlePrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides); // Loop back to last after the first slide
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides); // Decrement by one pair
   };
 
   return (
@@ -40,7 +40,7 @@ const Home = () => {
           <div className="button-group">
             <a href="/services" className="btn btn-services">Our Services</a>
             <a href="/contact" className="btn btn-contact">Contact Us</a>
-        </div>
+          </div>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ const Home = () => {
             </video>
           </div>
           <div className="placeholder-text">
-            <img src={Homelogo} alt="Legacy Redefined Logo" className="placeholder-logo" /> {/* Replace text with logo */}
+            <img src={Homelogo} alt="Legacy Redefined Logo" className="placeholder-logo" />
           </div>
         </div>
       </div>
@@ -78,9 +78,11 @@ const Home = () => {
         <h2>Clients Who Trust Us</h2>
         <div className="carousel-wrapper">
           <button className="carousel-arrow left-arrow" onClick={handlePrev}>←</button>
-          <div className="clients-logos" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+          <div className="clients-logos" style={{ transform: `translateX(-${currentSlide * 50}%)` }}>
             {logos.map((logo, index) => (
-              <img key={index} src={logo.src} alt={logo.alt} className="client-logo" style={{ display: currentSlide === index ? 'block' : 'none' }} />
+              <div key={index} className="client-logo-container" style={{ display: (index >= currentSlide * 2 && index < (currentSlide + 1) * 2) ? 'flex' : 'none' }}>
+                <img src={logo.src} alt={logo.alt} className="client-logo" />
+              </div>
             ))}
           </div>
           <button className="carousel-arrow right-arrow" onClick={handleNext}>→</button>

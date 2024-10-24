@@ -133,45 +133,47 @@ p {
 
 
 /* Clients Section */
-.clients-section {
-  padding: 50px 20px;
-  background-color: #fff;
+/* .clients-section { */
+  /* padding: 50px 20px; */
+  /* background-color: #fff;
   text-align: center;
-  position: relative; /* For positioning the arrows */
-}
+  position: relative; For positioning the arrows */
+/* } */
 
 .clients-section h2 {
   font-size: 2.5rem;
   color: #857312; /* Gold color */
   margin-bottom: 40px;
+  padding-left: 400px;
 }
-
-/* Wrapper to hold the carousel */
-.carousel-wrapper {
-  position: relative;
-  width: 200px; /* Ensure only one logo is visible at a time */
-  margin: 0 auto;
-  overflow: hidden; /* Hide any overflow */
-  display: flex; /* Flex container */
-  justify-content: center; /* Center the logos */
-  align-items: center; /* Vertically center */
-  height: 150px; /* Set the height to align with the logo size */
-}
-
 
 .clients-logos {
   display: flex;
-  justify-content: space-between; /* Ensure logos are horizontally centered */
-  align-items: center; /* Center logos vertically */
   transition: transform 0.5s ease-in-out;
-  width: max-content; /* Adjust width based on content to keep it centered */
+  width: max-content;
+}
+
+.client-logo-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; /* Ensure each pair takes up equal space */
 }
 
 .client-logo {
   width: 200px;
-  height: 150px; /* Fixed size */
-  object-fit: contain; /* Ensure logos fit within the container */
-  transition: transform 0.3s ease;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 20px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 450px; /* Adjust for two logos visible */
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 /* Arrow Buttons */
@@ -179,9 +181,9 @@ p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   border: none;
-  color: white;
+  color: rgb(30, 27, 27);
   font-size: 2rem;
   cursor: pointer;
   padding: 10px;
@@ -197,8 +199,8 @@ p {
 }
 
 .carousel-arrow:hover {
-  background-color: #857312;
-  color: #fff;
+  background-color: transparent;
+  color: #3e3939;
 }
 
 /* Responsive adjustments */
@@ -209,7 +211,7 @@ p {
   }
   
   .carousel-wrapper {
-    width: 150px; /* Adjust wrapper size for smaller screens */
+    width: 300px; /* Adjust for smaller screens */
     height: 120px; /* Adjust height */
   }
 }
@@ -221,7 +223,7 @@ p {
   }
   
   .carousel-wrapper {
-    width: 180px;
+    width: 360px;
     height: 130px;
   }
 }
