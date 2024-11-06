@@ -32,11 +32,11 @@ const Home = () => {
       {/* Hero Section */}
       <div className="hero-section">
         <div className="hero-content">
-          <h1 className="hero-title">
+          {/* <h1 className="hero-title">
             Your Distinguished <br />
             Business Process & <br />
             Risk Experts
-          </h1>
+          </h1> */}
           <div className="button-group">
             <a href="/services" className="btn btn-services">Our Services</a>
             <a href="/contact" className="btn btn-contact">Contact Us</a>

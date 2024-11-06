@@ -56,12 +56,12 @@
 }
 
 .navbar-item a:hover {
-  color: #ffd700; /* Gold hover effect */
+  color: #d9a760; /* Gold hover effect */
 }
 
 /* Active link with double line effect */
 .navbar-item .active {
-  color: #857312; /* Gold color for active link */
+  color: #d9a760; /* Gold color for active link */
 }
 
 .navbar-item .active::before,
@@ -85,7 +85,7 @@
 
 /* Add a double line under the active link */
 .active-link {
-  color: #857312; /* Keep the text color gold for the active link */
+  color: #d9a760; /* Keep the text color gold for the active link */
   position: relative;
 }
 
@@ -96,7 +96,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #857312; /* Change lines to gold */
+  background-color: #d9a760; /* Change lines to gold */
 }
 
 .active-link::before {

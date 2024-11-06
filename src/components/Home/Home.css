@@ -1,14 +1,21 @@
 /* Hero Section */
 .hero-section {
+  background-image: url('../../assets/Web Banner.jpg');
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #000;
-  background-image: url('../../assets/hero-bg.jpeg'); /* Replace with your background */
-  background-position: center;
-  background-size: cover;
+  justify-content: center;
+  position: relative;
   color: white;
+  text-align: center;
+}
+
+.button-group {
+  position: relative;
+  top: 100px;
+  gap: 20px;
 }
 
 .hero-content {
@@ -23,28 +30,37 @@
   margin-bottom: 30px;
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
 .btn {
-  padding: 15px 30px;
-  font-size: 1.2em;
-  color: #fff; /* White text */
-  background-color: #857312; /* Gold background */
-  border: none; /* No borders */
-  border-radius: 15px; /* Adjust this value for roundness */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
-  text-decoration: none; /* Removes underline */
+  padding: 12px 25px;
+  border: 2px solid #d9a760; /* Matches the gold color from the image */
+  color: #d9a760;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #fff; /* White background on hover */
-  color: #857312; /* Gold text on hover */
-  transform: translateY(-5px); /* Slight lift effect */
+.btn-contact {
+  background-color: #d9a760; 
+  color: #ffffff;
+}
+
+.btn-services {
+  background-color: transparent; 
+  color: #ffffff;
+}
+
+.btn-contact:hover {
+  background-color: #d9a760; /* Gold background on hover */
+  background-color: transparent; /* Black text on hover */
+}
+
+.btn-services:hover {
+  background-color: #d9a760; /* Gold background on hover */
+  color: #ffffff;
 }
 
 /* Video Section */
