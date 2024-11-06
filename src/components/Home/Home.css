@@ -27,7 +27,7 @@
 
 .button-group {
   display: flex;
-  gap: 20px; /* Adjusted spacing between buttons */
+  gap: 20px;
   justify-content: center;
   position: relative;
   top: 135px;
