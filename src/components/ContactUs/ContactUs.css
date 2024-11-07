@@ -47,83 +47,76 @@
     border-radius: 10px;
   }
   
-  /* Contact Form */
-  .contact-form {
-    background-color: #222;
-    padding: 30px;
-    border-radius: 10px;
-  }
-  
-  .contact-form .form-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .contact-form input, .contact-form select, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #333;
-    color: white;
-    border: 1px solid #555;
-    border-radius: 5px;
-  }
-  
-  .contact-form input::placeholder, .contact-form textarea::placeholder {
-    color: #999;
-  }
-  
-  .contact-form button {
-    background-color: #857312;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background-color: #d6c76e;
-  }
-  
-  /* Contact Us section fix for mobile */
+/* Contact Form */
+.contact-form {
+  background-color: #222;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds consistent spacing between form groups */
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column; /* Stacks labels and inputs vertically */
+  gap: 10px; /* Space between label and input */
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%; /* Consistent full width */
+  padding: 12px; /* Adjusted padding for consistent look */
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding doesn’t affect overall width */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allows vertical resizing only */
+  min-height: 100px; /* Adds a consistent height for the textarea */
+}
+
+.contact-form button {
+  background-color: #857312;
+  color: black;
+  padding: 15px; /* Consistent padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 100%; /* Full-width button */
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #d6c76e;
+}
+
+/* Contact Us section fix for mobile */
 @media (max-width: 768px) {
-  .contact-section {
+  .contact-us-section {
+    flex-direction: column;
     padding: 20px;
-    text-align: center; /* Center align text and form */
+    text-align: center;
   }
 
   .contact-form {
-    display: flex;
-    flex-direction: column; /* Stack form elements vertically */
-    gap: 15px; /* Add space between inputs */
-    width: 100%; /* Ensure form takes up full width */
+    gap: 15px; /* Mobile-specific spacing */
   }
 
   .contact-form input,
+  .contact-form select,
   .contact-form textarea {
-    width: 100%; /* Ensure input fields take up full width on mobile */
-    padding: 10px;
-    font-size: 1rem; /* Adjust font size */
+    padding: 12px;
+    font-size: 1rem;
   }
 
   .contact-form button {
-    padding: 12px;
     font-size: 1rem;
-    width: 100%; /* Ensure button fits within mobile width */
-  }
-
-  .contact-heading {
-    font-size: 1.5rem; /* Adjust heading size */
-    margin-bottom: 20px;
-  }
-
-  /* Adjust margin and padding for proper spacing */
-  .contact-section .info {
-    margin-bottom: 20px;
   }
 }
+
