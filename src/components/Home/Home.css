@@ -1,3 +1,10 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Hero Section */
 .hero-section {
   background-image: url('../../assets/Web Banner.jpg');
@@ -10,7 +17,7 @@
   position: relative;
   color: white;
   text-align: center;
-  padding-bottom: 20px;
+  padding: 0 15px; /* Add padding for smaller screens */
 }
 
 .hero-content {
@@ -19,7 +26,7 @@
 }
 
 .hero-title {
-  font-size: 4.5em;
+  font-size: 3em;
   font-weight: bold;
   color: #857312;
   margin-bottom: 30px;
@@ -31,6 +38,7 @@
   justify-content: center;
   position: relative;
   top: 135px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -116,10 +124,11 @@ video {
 
 /* Vision and Mission Section */
 .vision-mission-section {
-  display: flex; /* Use flexbox for layout */
+  display: flex;
+  flex-direction: column; /* Stacked layout for smaller screens */
   background-color: #0f0f0f;
-  align-items: stretch; /* Ensure both items stretch to the same height */
-  padding: 110px 10px; /* Adjust padding if needed */
+  align-items: center;
+  padding: 80px 15px;
 }
 
 .vision-mission-image {
@@ -153,47 +162,33 @@ p {
 
 
 /* Clients Section */
-/* .clients-section { */
-  /* padding: 50px 20px; */
-  /* background-color: #fff;
+.clients-section {
+  padding: 50px 15px;
+  background-color: #fff;
   text-align: center;
-  position: relative; For positioning the arrows */
-/* } */
+}
 
 .clients-section h2 {
-  font-size: 2.5rem;
-  color: #857312; /* Gold color */
-  margin-bottom: 40px;
-  padding-left: 400px;
+  font-size: 2rem;
+  color: #857312;
+  margin-bottom: 20px;
 }
 
 .clients-logos {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: max-content;
-}
-
-.client-logo-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%; /* Ensure each pair takes up equal space */
+  flex-wrap: wrap; /* Allows logos to wrap on smaller screens */
+  gap: 15px;
+  justify-content: center;
 }
 
 .client-logo {
-  width: 200px;
-  height: 150px;
-  object-fit: contain;
-  margin: 0 20px;
+  width: 120px;
+  height: auto;
+  margin: 0 auto;
 }
 
-.carousel-wrapper {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  width: 450px; /* Adjust for two logos visible */
-  margin: 0 auto;
-  overflow: hidden;
+.carousel-arrow {
+  font-size: 1.5rem;
 }
 
 /* Arrow Buttons */

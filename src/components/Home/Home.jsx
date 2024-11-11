@@ -5,9 +5,8 @@ import nydaLogo from '../../assets/nyda-logo.png';
 import absaLogo from '../../assets/absa-logo.png';
 import xmsLogo from '../../assets/xms-logo.webp';
 import companyLogo from '../../assets/company-logo.png';
-import visionImage from '../../assets/feature-Black-women-work.jpg';
-import Homelogo from '../../assets/Homelogo.png';
-
+import vision from '../../assets/vision.jpg';
+import LegacyRedefined from '../../assets/LegacyRedefined.jpg';
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const logos = [
@@ -32,11 +31,6 @@ const Home = () => {
       {/* Hero Section */}
       <div className="hero-section">
         <div className="hero-content">
-          {/* <h1 className="hero-title">
-            Your Distinguished <br />
-            Business Process & <br />
-            Risk Experts
-          </h1> */}
           <div className="button-group">
             <a href="/services" className="btn btn-services">Our Services</a>
             <a href="/contact" className="btn btn-contact">Contact Us</a>
@@ -55,7 +49,7 @@ const Home = () => {
             </video>
           </div>
           <div className="placeholder-text">
-            <img src={Homelogo} alt="Legacy Redefined Logo" className="placeholder-logo" />
+            <img src={LegacyRedefined} alt="Legacy Redefined Logo" className="placeholder-logo" />
           </div>
         </div>
       </div>
@@ -63,7 +57,7 @@ const Home = () => {
       {/* Vision and Mission Section */}
       <div className="vision-mission-section">
         <div className="vision-mission-image">
-          <img src={visionImage} alt="Vision and Mission" />
+          <img src={vision} alt="Vision and Mission" />
         </div>
         <div className="vision-mission-content">
           <h2>VISION</h2>

@@ -1,12 +1,12 @@
 import './AboutUs.css'; // Ensure you have this CSS file or adapt the styles accordingly
-import aboutus from '../../assets/aboutus.webp'; // Import the image
+import african from '../../assets/african.jpg'; // Import the image
 
 const AboutUs = () => {
   return (
     <section className="about-us-section">
       <div className="about-us-image">
         <h2>WHO WE ARE</h2>
-        <img src={aboutus} alt="About Us" />
+        <img src={african} alt="About Us" />
       </div>
       <div className="about-us-description">
         <p>
