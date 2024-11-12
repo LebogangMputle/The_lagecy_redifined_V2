@@ -6,7 +6,6 @@ import absaLogo from '../../assets/absa-logo.png';
 import xmsLogo from '../../assets/xms-logo.webp';
 import companyLogo from '../../assets/company-logo.png';
 import vision from '../../assets/vision.jpg';
-import LegacyRedefined from '../../assets/LegacyRedefined.jpg';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,7 +16,7 @@ const Home = () => {
     { src: xmsLogo, alt: "XMS Logo" }
   ];
 
-  const totalSlides = Math.ceil(logos.length / 2); // Calculate based on pairs
+  const totalSlides = Math.ceil(logos.length / 2);
 
   const handleNext = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
@@ -39,21 +38,16 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Video Section with Placeholder Text */}
       <div className="video-section">
         <h2>Our Story</h2>
-        <div className="video-placeholder-container">
-          <div className="video-box">
-            <video controls>
-              <source src={sampleVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div className="placeholder-text">
-            <img src={LegacyRedefined} alt="Legacy Redefined Logo" className="placeholder-logo" />
-          </div>
+        <div className="video-box-centered">
+          <video controls>
+            <source src={sampleVideo} type="video/mp4" />
+             Your browser does not support the video tag.
+          </video>
         </div>
       </div>
+
 
       {/* Vision and Mission Section */}
       <div className="vision-mission-section">

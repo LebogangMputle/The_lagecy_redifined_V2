@@ -85,12 +85,14 @@
 
 .video-section h2 {
   font-size: 2.5rem;
-  color: #d9a760;
-  margin-bottom: 20px;
+  color: #857312;
+  margin-bottom: 40px;
+  margin-top: -20px; /* Add this to move the heading higher */
 }
 
+
 .video-box {
-  max-width: 1000px;
+  max-width: 800px;
 }
 
 video {
@@ -110,18 +112,6 @@ video {
     transform: rotateY(0deg);
   }
 }
-
-.placeholder-logo,
-.placeholder-logo img {
-  max-width: 200px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-top: 20px; /* Space from the video */
-  animation: flip 2s infinite; /* Apply the flip animation */
-  border: none !important; /* Ensure no border is applied */
-  box-shadow: none !important; /* Remove any shadow */
-}
-
-
 
 
 /* Vision and Mission Section */
