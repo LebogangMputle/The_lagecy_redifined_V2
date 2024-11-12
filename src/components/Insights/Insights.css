@@ -1,38 +1,46 @@
+/* Insights Section */
 .insights {
   min-height: 60vh;
   font-family: Arial, sans-serif;
   padding: 20px;
-  color: #000000;
+  background-color: #20201f; /* Dark background to match About Us */
+  color: #ffffff; /* White text color for readability */
 }
 
+/* Grid Container */
 .grid-container {
   display: flex;
-  text-align: center;
   gap: 20px;
+  text-align: left; /* Align text from left to right */
 }
 
-.company-insights{
-  background-color: #f6f7f8; /* Dark blue background */
+/* Company Insights */
+.company-insights {
+  background-color: #20201f; /* Dark background color */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading */
 h2 {
-  color: black;
+  color: #d9a760; /* Header color to match theme */
   margin-top: 100px;
-  display: flex;
   text-align: center;
 }
 
+/* Paragraph Styling */
 .company-insights p {
-  color: #111111;
+  color: #ffffff; /* White text for better contrast */
+  font-size: 1rem; /* Consistent font size */
   line-height: 1.6;
+  margin-bottom: 20px; /* Spacing between paragraphs */
 }
 
+/* Insight Image Styling */
 .insight-image {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
-  border-radius: 8px; /* Optional for rounded corners */
+  border-radius: 8px; /* Rounded corners for image */
 }
