@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Screenshot from '../../assets/Screenshot.png';
 import Screenshot2 from '../../assets/Screenshot2.png';
-import Screenshot3 from '../../assets/Screenshot3.png';
+import Screenshot1 from '../../assets/Screenshot1.png';
 // import blog4 from '../../assets/blog4.jpeg';
 // import blog5 from '../../assets/blog5.jpeg';
 import './MyBlogs.css';
@@ -26,20 +26,8 @@ const MyBlogs = () => {
       title: "The essential role for risk management",
       shortDescription: "When entrepreneurs embark on a their journey of starting a business, it's natural to focus on dreams and aspirations. After all, thats the glamour and drive of starting a business. But there is a critical aspect that can make or break your glorious venture-risk management. ",
       fullDescription: "When entrepreneurs embark on a their journey of starting a business, it's natural to focus on dreams and aspirations. After all, thats the glamour and drive of starting a business. But there is a critical aspect that can make or break your glorious venture-risk management. Way to often, many of us start our business without understanding the potential pitfalls that lie ahead. Realistically, the significance of risk management cannot be stated enough, especially for small and informal businesses. For starters, did you know that less that half of businesses that startup have a chance of survivng beyond the first five years of operation? According to the university of the western Cape, South Africa startups face an alarming failure rate of 70%-80% within the first five years than anywhere else in the world.However, this number can be greatly reduced with effective risk management. Small businesses tend to overlook certainareas of risk that might have a significant impact on their operations. These can include cybersecurity risks, supply chain vulnerabilities, potential legal disputes and economic fluctuations. Most commonly, businesses stumble due to financial challenges such as cash crush, lack of demand or fierce competition. the good news is that you can tip the odds in your favor by deploying a savvy risk management strategy to spot these pitfalls before they snag your success. if you're a small manufacturing business, for example, you might benefit from monitoring your cash flow regularly and setting up financial reserves, you can anticipate periods of reduced income and ensure you have the funds to cover operational expenses. Moreover, it's only operational factors that need close consideration; we need to take a careful look at the potential shifts in laws and regulations as it is just as vital. in fact, being aware of the laws and regulations pertaining to your business is a crucial step you should take even before getting started with your business. Admittedly, risk management does require a good degree of know-how to implement it effectivily. A well-crafted risk management strategy involves a combination of undertsanding your business' unique weak spots, keeping an eye on whats happening around you, analyzing finances and anticipating potential shifts in the market and industry. It's essentially about being proactive about identifying and staying ahead of risks before they materialize. But the payoff in terms of long-term success and stability can be well worth the effort. But if you're into working out tghese processes just yet, that's okay! This where Legacy Redefined comes in to assist. We offer training for business like yours. our aim is to empower you the skills to handke and identify your own risks. We'll walk you throught the right moves to make. With our support, you can establish solid plans and shield your busniess frompotential harm. In essence, the journey to success is paved with informed choices. Being two steps forward will allow you to land on your feet when you're caught off guard. And while the road may require effort, dedication and ongoing education, the rewards-seeing your dreams come to life- is well worth the pursuit",
-      image: Screenshot3,
+      image: Screenshot1,
     },
-    // {
-    //   title: "Blog 4",
-    //   shortDescription: "Short description for Blog 4",
-    //   fullDescription: "Full description for Blog 4. This is where the longer version of the blog description will go.",
-    //   image: blog4,
-    // },
-    // {
-    //   title: "Blog 5",
-    //   shortDescription: "Short description for Blog 5",
-    //   fullDescription: "Full description for Blog 5. This is where the longer version of the blog description will go.",
-    //   image: blog5,
-    // },
   ];
 
   const toggleReadMore = (index) => {
