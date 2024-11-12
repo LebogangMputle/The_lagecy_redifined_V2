@@ -28,7 +28,7 @@
 .hero-title {
   font-size: 3em;
   font-weight: bold;
-  color: #857312;
+  color: #d9a760;
   margin-bottom: 30px;
 }
 
@@ -85,17 +85,15 @@
 
 .video-section h2 {
   font-size: 2.5rem;
-  color: #857312;;
+  color: #d9a760;
   margin-bottom: 20px;
 }
 
 .video-box {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1000px;
 }
 
 video {
-  width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -113,12 +111,16 @@ video {
   }
 }
 
-.placeholder-logo {
+.placeholder-logo,
+.placeholder-logo img {
   max-width: 200px; /* Adjust size as needed */
   height: auto; /* Maintain aspect ratio */
   margin-top: 20px; /* Space from the video */
   animation: flip 2s infinite; /* Apply the flip animation */
+  border: none !important; /* Ensure no border is applied */
+  box-shadow: none !important; /* Remove any shadow */
 }
+
 
 
 
@@ -159,8 +161,6 @@ p {
 }
 
 
-
-
 /* Clients Section */
 .clients-section {
   padding: 50px 15px;
@@ -174,21 +174,34 @@ p {
   margin-bottom: 20px;
 }
 
-.clients-logos {
+.carousel-wrapper {
   display: flex;
-  flex-wrap: wrap; /* Allows logos to wrap on smaller screens */
-  gap: 15px;
+  align-items: center;
   justify-content: center;
-}
-
-.client-logo {
-  width: 120px;
-  height: auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px; /* Increase width to show all images */
   margin: 0 auto;
 }
 
-.carousel-arrow {
-  font-size: 1.5rem;
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth scrolling */
+  justify-content: center;
+  width: 100%;
+}
+
+.client-logo {
+  flex: 0 0 auto; /* Keep images in a row */
+  text-align: center;
+  transform-origin: center; /* Set transform origin for rotation */
+  transition: transform 0.5s ease-in-out; /* Smooth rotation */
+}
+
+.client-logo img {
+  width: 100px;
+  height: auto;
 }
 
 /* Arrow Buttons */
@@ -206,17 +219,18 @@ p {
 }
 
 .left-arrow {
-  left: 10px;
+  left: -30px; /* Move left arrow further away */
 }
 
 .right-arrow {
-  right: 10px;
+  right: -30px; /* Move right arrow further away */
 }
 
 .carousel-arrow:hover {
   background-color: transparent;
   color: #3e3939;
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -246,7 +260,7 @@ p {
 /* Video Section */
 .video-section {
   padding: 100px 20px;
-  background-color: #111;
+  background-color: #181515;
   color: white;
   text-align: center;
 }
@@ -277,11 +291,12 @@ video {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
+
+
 .placeholder-text {
   flex: 1;
   text-align: left;
   max-width: 45%;
-  background-color: #222;
   padding: 20px;
   border-radius: 8px;
   color: #fff;

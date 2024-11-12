@@ -7,6 +7,7 @@ import xmsLogo from '../../assets/xms-logo.webp';
 import companyLogo from '../../assets/company-logo.png';
 import vision from '../../assets/vision.jpg';
 import LegacyRedefined from '../../assets/LegacyRedefined.jpg';
+
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const logos = [
@@ -16,14 +17,14 @@ const Home = () => {
     { src: xmsLogo, alt: "XMS Logo" }
   ];
 
-  const totalSlides = Math.ceil(logos.length / 2); // Ensure we calculate based on pairs
+  const totalSlides = Math.ceil(logos.length / 2); // Calculate based on pairs
 
   const handleNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides); // Increment by one pair
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
   };
 
   const handlePrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides); // Decrement by one pair
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
   };
 
   return (
@@ -40,7 +41,7 @@ const Home = () => {
 
       {/* Video Section with Placeholder Text */}
       <div className="video-section">
-        <h2>The Story</h2>
+        <h2>Our Story</h2>
         <div className="video-placeholder-container">
           <div className="video-box">
             <video controls>
@@ -72,9 +73,9 @@ const Home = () => {
         <h2>Clients Who Trust Us</h2>
         <div className="carousel-wrapper">
           <button className="carousel-arrow left-arrow" onClick={handlePrev}>←</button>
-          <div className="clients-logos" style={{ transform: `translateX(-${currentSlide * 50}%)` }}>
+          <div className="clients-logos" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
             {logos.map((logo, index) => (
-              <div key={index} className="client-logo-container" style={{ display: (index >= currentSlide * 2 && index < (currentSlide + 1) * 2) ? 'flex' : 'none' }}>
+              <div key={index} className="client-logo-container" style={{ transform: currentSlide === Math.floor(index / 2) ? 'rotateY(360deg)' : 'rotateY(0deg)' }}>
                 <img src={logo.src} alt={logo.alt} className="client-logo" />
               </div>
             ))}

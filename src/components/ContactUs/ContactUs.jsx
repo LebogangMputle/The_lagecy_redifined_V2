@@ -43,16 +43,7 @@ const ContactUs = () => {
             <input type="text" placeholder="Province" required />
           </div>
           <input type="text" placeholder="Business Sector" required />
-          <select required>
-            <option value="">Training Program or Module Interested In</option>
-            <option value="Program 1">Program 1</option>
-            <option value="Program 2">Program 2</option>
-          </select>
-          <select required>
-            <option value="">Group Size</option>
-            <option value="1-5">1-5</option>
-            <option value="6-10">6-10</option>
-          </select>
+          
           <select required>
             <option value="">How did you hear from us?</option>
             <option value="Social Media">Facebook</option>
