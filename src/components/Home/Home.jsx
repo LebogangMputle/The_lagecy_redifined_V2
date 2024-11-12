@@ -32,8 +32,8 @@ const Home = () => {
       <div className="hero-section">
         <div className="hero-content">
           <div className="button-group">
-            <a href="/services" className="btn btn-services">Our Services</a>
-            <a href="/contact" className="btn btn-contact">Contact Us</a>
+            <a href="/ourServices" className="btn btn-services">Our Services</a>
+            <a href="/contactUs" className="btn btn-contact">Contact Us</a>
           </div>
         </div>
       </div>

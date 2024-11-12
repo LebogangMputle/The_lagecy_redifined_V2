@@ -8,7 +8,7 @@ const Insights = () => {
         <div className='grid-container'>
             <div className='company-insights'>
                 <img src={officeImage} alt="People working in an office" className="insight-image" />
-                <p>Small Micro Medium Enterprises (SMME) due to the nature of their business operations
+                <p>Small Micro Medium Enterprises (SMMEs) due to the nature of their business operations
 and the lack of appropriate skills and well defined business processes are typically
 categorised as high risk. This means that growth and funding opportunities for most
 may be difficult to reach as this would require them to first meet the requirements set by

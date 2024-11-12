@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 50px;
     background-color: #111;
+    background-image: url('../../assets/contact1.jpg');
     color: white;
   }
   
@@ -14,8 +15,9 @@
   
   .contact-left h2, .contact-right h2 {
     font-size: 2rem;
-    color: #857312;
+    color: #d9a760;
     margin-bottom: 20px;
+    padding-right: 390px;
   }
   
   .contact-info {
@@ -30,12 +32,12 @@
   
   .contact-info i {
     margin-right: 10px;
-    color: #857312;
+    color: #d9a760;
   }
   
   .social-icons i {
     font-size: 1.5rem;
-    color: #857312;
+    color: #d9a760;
     margin: 10px 10px 20px 0;
     cursor: pointer;
   }
@@ -81,7 +83,7 @@
 }
 
 .contact-form button {
-  background-color: #857312;
+  background-color: #d9a760;
   color: black;
   padding: 15px; /* Consistent padding */
   border: none;
@@ -95,6 +97,13 @@
 .contact-form button:hover {
   background-color: #d6c76e;
 }
+
+/* .map-container {
+  height: 50%;
+  display: absolute;
+  justify-content: start;
+
+} */
 
 /* Contact Us section fix for mobile */
 @media (max-width: 768px) {

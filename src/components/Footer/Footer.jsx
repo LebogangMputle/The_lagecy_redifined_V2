@@ -38,9 +38,9 @@ const Footer = () => {
         <p>COPYRIGHT © 2024 THEE ANCHOR PTY LTD. ALL RIGHTS RESERVED.</p>
         <p>FOLLOW US ON SOCIAL MEDIA</p>
         <div className="footer-socials">
-          <a href="#"><i className="fab fa-facebook-f"></i></a>
-          <a href="#"><i className="fab fa-linkedin-in"></i></a>
-          <a href="#"><i className="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/legacyredefinedza" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/legacyredefined" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/legacy_redefinedza?igsh=aGxwZXFmamJzaTVw&utm_source=qr" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
         </div>
       </div>
     </footer>

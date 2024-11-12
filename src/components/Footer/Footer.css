@@ -16,7 +16,7 @@
 /* Other styles remain unchanged */
 .footer-logo, h2, h1 {
   font-size: 1.8rem;
-  color: rgb(201, 192, 192);
+  color: #d9a760;
   margin-bottom: 15px;
   padding: 10px 0;
 }
@@ -40,7 +40,7 @@
 
 .footer-section ul li i {
   margin-right: 10px;
-  color: #857312;
+  color: #d9a760;
 }
 
 .footer-section ul li a {
@@ -49,7 +49,7 @@
 }
 
 .footer-section ul li a:hover {
-  color: #857312;
+  color: #d9a760;
 }
 
 .footer-bottom {
@@ -75,7 +75,7 @@
 }
 
 .footer-socials a:hover {
-  color: #857312;
+  color: #d9a760;
 }
 
 /* Footer section fix for mobile */

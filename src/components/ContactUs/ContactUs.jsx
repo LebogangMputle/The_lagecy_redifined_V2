@@ -1,4 +1,3 @@
-
 import './ContactUs.css';
 
 const ContactUs = () => {
@@ -13,14 +12,19 @@ const ContactUs = () => {
           <li><i className="fas fa-map-marker-alt"></i> 61 Jewel Beetle Street, Centurion, 0157</li>
         </ul>
         <div className="social-icons">
-          <i className="fab fa-facebook"></i>
-          <i className="fab fa-linkedin"></i>
-          <i className="fab fa-instagram"></i>
-          <i className="fab fa-twitter"></i>
+        <a href="https://www.facebook.com/profile.php?id=100089835789730&mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/legacy-redefined/" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/legacy_redefinedza?igsh=aGxwZXFmamJzaTVw&utm_source=qr" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-instagram"></i>
+          </a>
         </div>
         <div className="map-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509102!2d144.953735315316!3d-37.81627977975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf57743f07ac6350!2sMelbourne%20CBD!5e0!3m2!1sen!2sau!4v1633174000000!5m2!1sen!2sau"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13216.083077249108!2d28.175679620076218!3d-25.87537632144735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95671d3bbf52d1%3A0xbf9c1a698d506f52!2s61%20Jewel%20Beetle%20Street%2C%20Centurion%2C%200157!5e0!3m2!1sen!2sza!4v1699891730042!5m2!1sen!2sza"
             width="100%" height="300" style={{border: 0}} allowFullScreen="" loading="lazy"
           ></iframe>
         </div>
