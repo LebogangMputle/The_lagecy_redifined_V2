@@ -75,32 +75,6 @@
 }
 
 
-/* Video Section */
-.video-section {
-  bottom: 100px;
-  background-color: #917a7a;
-  color: white;
-  text-align: center;
-}
-
-.video-section h2 {
-  font-size: 2.5rem;
-  color: #857312;
-  margin-bottom: 40px;
-  margin-top: -20px; /* Add this to move the heading higher */
-}
-
-
-.video-box {
-  max-width: 800px;
-}
-
-video {
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
 @keyframes flip {
   0% {
     transform: rotateY(0deg);
@@ -126,11 +100,12 @@ video {
 .vision-mission-image {
   flex: 1; /* Allow the image to take up space */
   text-align: center; /* Center the image */
+  width: 100%;
 }
 
 .vision-mission-image img {
   padding-top: 80px;
-  max-width: 100%; /* Ensure the image is responsive */
+  max-width: 900px; /* Ensure the image is responsive */
   height: 410px; /* Maintain aspect ratio */
 }
 
@@ -153,114 +128,168 @@ p {
 
 /* Clients Section */
 .clients-section {
-  padding: 50px 15px;
+  padding: 40px 15px;
   background-color: #fff;
   text-align: center;
+  position: relative;
 }
 
 .clients-section h2 {
   font-size: 2rem;
-  color: #857312;
-  margin-bottom: 20px;
+  color: #d9a760;
+  margin-bottom: 15px;
 }
 
-.carousel-wrapper {
+.slide-show-frame {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 300px;
+  max-width: 200px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
-  width: 100%;
-  max-width: 800px; /* Increase width to show all images */
-  margin: 0 auto;
 }
 
-.carousel-content {
+.client-logo-container {
+  width: 200px;
   display: flex;
-  transition: transform 0.5s ease; /* Smooth scrolling */
   justify-content: center;
-  width: 100%;
+  position: relative;
+  transition: transform 1s ease-in-out;
 }
 
 .client-logo {
-  flex: 0 0 auto; /* Keep images in a row */
-  text-align: center;
-  transform-origin: center; /* Set transform origin for rotation */
-  transition: transform 0.5s ease-in-out; /* Smooth rotation */
-}
-
-.client-logo img {
   width: 100px;
   height: auto;
+  opacity: 1;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-/* Arrow Buttons */
+.fade-in-right {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeInRight 1s ease-in-out forwards;
+}
+
+.fade-out-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeOutLeft 1s ease-in-out forwards;
+}
+
+/* Keyframes for fade and slide animation */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+/* Styling for arrows */
 .carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  color: rgb(30, 27, 27);
+  color: #3e3939;
   font-size: 2rem;
   cursor: pointer;
   padding: 10px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.3s;
   z-index: 1;
 }
 
+.carousel-arrow:hover {
+  color: #d9a760;
+}
+
 .left-arrow {
-  left: -30px; /* Move left arrow further away */
+  left: 50px; /* Positions the left arrow on the far left side of the screen */
 }
 
 .right-arrow {
-  right: -30px; /* Move right arrow further away */
-}
-
-.carousel-arrow:hover {
-  background-color: transparent;
-  color: #3e3939;
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .client-logo {
-    width: 150px; /* Adjust size for small screens */
-    height: 120px;
-  }
-  
-  .carousel-wrapper {
-    width: 300px; /* Adjust for smaller screens */
-    height: 120px; /* Adjust height */
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .client-logo {
-    width: 180px;
-    height: 130px;
-  }
-  
-  .carousel-wrapper {
-    width: 360px;
-    height: 130px;
-  }
+  right: 50px; /* Positions the right arrow on the far right side of the screen */
 }
 
 /* Video Section */
+/* Keyframes for typing and deleting animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 25%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #d9a760;
+  }
+}
+
+.video-box {
+  max-width: 800px;
+}
+
 .video-section {
-  padding: 100px 20px;
+  padding: 0px 50px;
   background-color: #181515;
   color: white;
   text-align: center;
 }
 
 .video-section h2 {
-  font-size: 2.5rem;
-  color: #857312;
-  margin-bottom: 40px;
-  padding-left: 600px;
+  font-size: 1rem;
+  color: #d9a760;
+  margin-bottom: 100px;
+  text-align: center;
+  padding-left: 0;
+  display: inline-block; /* Centers the element within its container */
+  /* Apply typing effect */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #d9a760;
+  animation: typing 3s steps(30, end) infinite, blink 0.7s step-end infinite;
+    /* Control width to set where the typing cursor stops */
+    width: 5ch; /* Adjust this value based on text length */
 }
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .video-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-left: 0;
+    margin-right: 0;
+
+    /* Ensure animation is active on mobile */
+    animation: typing 3s steps(30, end) infinite, blink 0.7s step-end infinite;
+  }
+}
+
 
 .video-placeholder-container {
   display: flex;
@@ -269,19 +298,12 @@ p {
   gap: 40px; /* Space between video and placeholder text */
 }
 
-.video-box {
-  flex: 1;
-  max-width: 50%;
-}
-
 video {
   width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
-
-
 
 .placeholder-text {
   flex: 1;
@@ -294,7 +316,7 @@ video {
 
 .placeholder-text h3 {
   font-size: 1.8rem;
-  color: #857312;
+  color: #d9a760;
   margin-bottom: 20px;
 }
 

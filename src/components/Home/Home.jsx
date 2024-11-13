@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Home.css';
 import sampleVideo from "../../assets/video.mp4";
 import nydaLogo from '../../assets/nyda-logo.png';
@@ -8,7 +8,9 @@ import companyLogo from '../../assets/company-logo.png';
 import vision from '../../assets/vision.jpg';
 
 const Home = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentLogoIndex, setCurrentLogoIndex] = useState(0);
+  const [animationClass, setAnimationClass] = useState('fade-in-right');
+
   const logos = [
     { src: nydaLogo, alt: "NYDA Logo" },
     { src: absaLogo, alt: "Absa Logo" },
@@ -16,14 +18,29 @@ const Home = () => {
     { src: xmsLogo, alt: "XMS Logo" }
   ];
 
-  const totalSlides = Math.ceil(logos.length / 2);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 10000); // Rotate every 10 seconds
+    return () => clearInterval(interval);
+  }, [currentLogoIndex]);
 
   const handleNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+    setAnimationClass('fade-out-left');
+    setTimeout(() => {
+      setCurrentLogoIndex((prevIndex) => (prevIndex + 1) % logos.length);
+      setAnimationClass('fade-in-right');
+    }, 1000); // Match timeout with transition duration
   };
 
   const handlePrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
+    setAnimationClass('fade-out-left');
+    setTimeout(() => {
+      setCurrentLogoIndex((prevIndex) =>
+        prevIndex === 0 ? logos.length - 1 : prevIndex - 1
+      );
+      setAnimationClass('fade-in-right');
+    }, 1000);
   };
 
   return (
@@ -64,19 +81,19 @@ const Home = () => {
 
       {/* Clients Section */}
       <div className="clients-section">
-        <h2>Clients Who Trust Us</h2>
-        <div className="carousel-wrapper">
-          <button className="carousel-arrow left-arrow" onClick={handlePrev}>←</button>
-          <div className="clients-logos" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-            {logos.map((logo, index) => (
-              <div key={index} className="client-logo-container" style={{ transform: currentSlide === Math.floor(index / 2) ? 'rotateY(360deg)' : 'rotateY(0deg)' }}>
-                <img src={logo.src} alt={logo.alt} className="client-logo" />
-              </div>
-            ))}
-          </div>
-          <button className="carousel-arrow right-arrow" onClick={handleNext}>→</button>
+      <h2>Clients Who Trust Us</h2>
+      <div className="slide-show-frame">
+        <div className={`client-logo-container ${animationClass}`}>
+          <img
+            src={logos[currentLogoIndex].src}
+            alt={logos[currentLogoIndex].alt}
+            className="client-logo"
+          />
         </div>
+        <button className="carousel-arrow left-arrow" onClick={handlePrev}>←</button>
+        <button className="carousel-arrow right-arrow" onClick={handleNext}>→</button>
       </div>
+    </div>
     </>
   );
 };

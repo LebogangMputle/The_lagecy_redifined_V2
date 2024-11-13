@@ -3,7 +3,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif; /* Adjust font-family as needed */
-  font-size: 14px; /* Reduced base font size for the entire app */
 }
 
 .main-content {
@@ -91,7 +90,7 @@ section {
 
 /* Video Section */
 .video-section h2 {
-  font-size: 2rem; /* Reduced video section title size */
+  font-size: 4rem; /* Reduced video section title size */
 }
 
 .vision-mission-section h2 {
