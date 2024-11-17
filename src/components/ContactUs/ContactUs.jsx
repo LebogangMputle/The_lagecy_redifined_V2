@@ -31,7 +31,7 @@ const ContactUs = () => {
       </div>
 
       <div className="contact-right">
-        <h2>CONTACT INFORMATION</h2>
+        <h3>Contact Information</h3>
         <form className="contact-form">
           <div className="form-group">
             <input type="text" placeholder="First Name" required />

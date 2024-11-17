@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #20201f;
+  background: #20201f; /* Updated background to dark grey */
 }
 
 /* About Us Section */
@@ -12,50 +12,83 @@ body {
   flex-direction: column;
   align-items: center; /* Center the content */
   text-align: center; /* Center the text */
+  padding: 30px; /* Original padding preserved */
+  gap: 20px; /* Original spacing between elements preserved */
 }
 
 .about-us-image {
-  background-color: #20201f; /* Set the background color to grey */
-  padding: 0px; /* Add some padding around the image */
-  margin-bottom: -60px;
-  border-radius: 8px; /* Optional: round the corners */
+  background-color: #20201f; /* Updated background color */
+  padding: 0px; /* Adjusted padding */
+  margin-bottom: -60px; /* Updated margin for overlap effect */
+  border-radius: 8px; /* Rounded corners for the container */
 }
 
 .about-us-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px; /* Optional: round the corners of the image */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
 .about-us-description {
-  width: 100%; /* Fill the entire screen width */
-  color: #ffffff;
-  padding: 120px 20px; /* Adjust top and bottom padding as needed */;
-  text-align: left;
+  width: 100%; /* Full width for content */
+  color: #ffffff; /* Updated text color */
+  padding: 120px 20px; /* Adjusted padding for spacing */
+  text-align: left; /* Maintain left alignment for text */
+  font-size: 1rem; /* Original font size */
+  line-height: 1.6; /* Maintain spacing for readability */
 }
 
 .about-us-description p {
-  font-size: 1rem; /* Decrease the font size by 20% */
-  line-height: 1.6;
-  color: #ffffff;
-  margin-bottom: 50px;
+  font-size: 1rem; /* Slightly reduced font size */
+  line-height: 1.6; /* Consistent line height */
+  color: #ffffff; /* Updated text color for readability */
+  margin-bottom: 50px; /* Increased spacing for visual appeal */
 }
 
 /* Program Structure Header */
 .program-structure h4 {
-  font-size: 1.5rem; /* Increase font size for header */
-  margin-top: 30px; /* Add space above the header */
-  color: #d9a760; /* Optional: change color to highlight */
+  font-size: 1.5rem; /* Enlarged header font size */
+  margin-top: 30px; /* Added top spacing */
+  color: #d9a760; /* Highlighted with gold color */
 }
 
 /* Program Structure List */
 .program-structure ul {
-  padding-left: 20px; /* Add padding for indentation */
-  margin-top: 10px; /* Increase space between h4 and list */
+  padding-left: 20px; /* Indented list items */
+  margin-top: 10px; /* Spacing between header and list */
 }
 
 .program-structure li {
-  margin-bottom: 10px; /* Add spacing between list items */
-  line-height: 1.6;
+  margin-bottom: 10px; /* Spacing between list items */
+  line-height: 1.6; /* Consistent line height */
+}
+
+/* B-BBEE Card Styling */
+.bbbee-card {
+  margin-top: 20px;
+  width: 200px; /* Set a fixed width for a smaller card */
+  height: 200px; /* Match height to make it a square */
+  padding: 15px;
+  background-color: #292828; /* Dark grey background */
+  color: #928f8f; /* Neutral text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 0; /* Remove rounding for sharp corners */
+  text-align: center; /* Center the text inside the card */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.bbbee-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem; /* Slightly smaller font size for the header */
+  color: #d9a760; /* Gold highlight for the header */
+}
+
+.bbbee-card p {
+  margin: 0;
+  font-size: 0.9rem; /* Slightly smaller font size for description */
+  color: #666666; /* Subtle gray for description */
 }

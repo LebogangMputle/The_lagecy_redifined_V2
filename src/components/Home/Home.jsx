@@ -12,10 +12,10 @@ const Home = () => {
   const [animationClass, setAnimationClass] = useState('fade-in-right');
 
   const logos = [
-    { src: nydaLogo, alt: "NYDA Logo" },
-    { src: absaLogo, alt: "Absa Logo" },
-    { src: companyLogo, alt: "Thee Anchor Pty Ltd Logo" },
-    { src: xmsLogo, alt: "XMS Logo" }
+    { src: nydaLogo, alt: "NYDA Logo", link: "https://www.nyda.gov.za" },
+    { src: absaLogo, alt: "Absa Logo", link: "https://www.absa.africa/absaafrica/business/development/" },
+    { src: companyLogo, alt: "Thee Anchor Pty Ltd Logo", link: "#" }, // Add link if available
+    { src: xmsLogo, alt: "XMS Logo", link: "https://www.xponentialmining.co.za/" }
   ];
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const Home = () => {
       </div>
 
       <div className="video-section">
-        <h2>Our Story</h2>
+        <h2>OUR STORY</h2>
         <div className="video-box-centered">
           <video controls>
             <source src={sampleVideo} type="video/mp4" />
@@ -64,7 +64,6 @@ const Home = () => {
           </video>
         </div>
       </div>
-
 
       {/* Vision and Mission Section */}
       <div className="vision-mission-section">
@@ -81,19 +80,22 @@ const Home = () => {
 
       {/* Clients Section */}
       <div className="clients-section">
-      <h2>Clients Who Trust Us</h2>
-      <div className="slide-show-frame">
-        <div className={`client-logo-container ${animationClass}`}>
-          <img
-            src={logos[currentLogoIndex].src}
-            alt={logos[currentLogoIndex].alt}
-            className="client-logo"
-          />
+        <h2>Clients Who Trust Us</h2>
+        <div className="logos-container">
+          {logos.map((logo, index) => (
+            <a
+              key={index}
+              href={logo.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="logo-link"
+            >
+              <img src={logo.src} alt={logo.alt} className="client-logo" />
+            </a>
+          ))}
         </div>
-        <button className="carousel-arrow left-arrow" onClick={handlePrev}>←</button>
-        <button className="carousel-arrow right-arrow" onClick={handleNext}>→</button>
       </div>
-    </div>
+
     </>
   );
 };
