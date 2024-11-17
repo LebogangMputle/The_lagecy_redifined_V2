@@ -66,29 +66,32 @@ body {
 
 /* B-BBEE Card Styling */
 .bbbee-card {
-  margin-top: 20px;
-  width: 200px; /* Set a fixed width for a smaller card */
-  height: 200px; /* Match height to make it a square */
+  width: 1250px; /* Fixed square size */
+  height: 200px; /* Fixed square size */
   padding: 15px;
-  background-color: #292828; /* Dark grey background */
-  color: #928f8f; /* Neutral text color */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  border-radius: 0; /* Remove rounding for sharp corners */
-  text-align: center; /* Center the text inside the card */
+  background-color: #2a2a29; /* Slightly lighter than the background (#20201f) */
+  color: #d9a760; /* Gold text color for contrast */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border-radius: 16px; /* Rounded edges */
   display: flex; /* Flexbox for centering content */
   flex-direction: column; /* Stack content vertically */
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
+  margin: 0 auto; /* Center card horizontally */
+  position: absolute; /* Position for full centering */
+  top: 1270px;
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for card size */
 }
 
 .bbbee-card h3 {
   margin-bottom: 10px;
-  font-size: 1.2rem; /* Slightly smaller font size for the header */
-  color: #d9a760; /* Gold highlight for the header */
+  font-size: 1.2rem; /* Slightly smaller font size */
+  color: #d9a760; /* Gold highlight for header */
 }
 
 .bbbee-card p {
   margin: 0;
-  font-size: 0.9rem; /* Slightly smaller font size for description */
-  color: #666666; /* Subtle gray for description */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #ffffff; /* White text for readability */
 }

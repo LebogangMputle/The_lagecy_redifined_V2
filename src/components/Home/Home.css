@@ -132,10 +132,12 @@ p {
 }
 
 .clients-section h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* Adjust this value for spacing */
+  margin-top: -20px; /* Moves the heading further up */
   font-size: 1.8rem;
   font-weight: bold;
 }
+
 
 .logos-container {
   display: flex;
@@ -165,20 +167,8 @@ p {
   0% {
     width: 0;
   }
-  50% {
-    width: 25%;
-  }
   100% {
-    width: 50%;
-  }
-}
-
-@keyframes blink {
-  0%, 100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #d9a760;
+    width: 100%; /* Ensure the entire text is revealed */
   }
 }
 
@@ -187,46 +177,45 @@ p {
 }
 
 .video-section {
-  padding: 0px 50px;
+  padding: 50px 20px; /* Ensure proper padding */
   background-color: #181515;
   color: white;
   text-align: center;
+  overflow: hidden; /* Prevent any overflow issues */
+  min-height: 300px; /* Ensure enough height for the section */
+  position: relative;
 }
 
 .video-section h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #d9a760;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   text-align: center;
   padding-left: 0;
-  display: inline-block; /* Centers the element within its container */
-  /* Apply typing effect */
-  white-space: nowrap;
+  display: inline-block;
+  white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden;
   border-right: 2px solid #d9a760;
-  animation: typing 5s steps(25, end) infinite, blink 1s step-end infinite;
-    /* Control width to set where the typing cursor stops */
-    width: 10ch; /* Adjust this value based on text length */
+  animation: typing 6s steps(15, end) infinite, blink 1s step-end infinite; /* Adjust the number of steps */
+  max-width: 100%; /* Allow text to expand fully */
+  width: 100%; /* Allow the text container to adjust based on content */
 }
-/* Responsive adjustment for mobile */
+
+/* Adjust for smaller screens */
 @media (max-width: 768px) {
   .video-section h2 {
     font-size: 1.8rem;
-    text-align: center;
-    padding-left: 0;
-    margin-right: 0;
-
-    /* Ensure animation is active on mobile */
-    animation: typing 3s steps(30, end) infinite, blink 0.7s step-end infinite;
+    animation: typing 5s steps(15, end) infinite, blink 0.7s step-end infinite;
   }
 }
 
 
 .video-placeholder-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
   gap: 40px; /* Space between video and placeholder text */
+  flex-wrap: wrap; /* Ensure responsiveness for smaller screens */
+  margin-top: 20px; /* Add space below the heading */
 }
 
 video {
