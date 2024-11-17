@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import './Home.css';
 import sampleVideo from "../../assets/video.mp4";
 import nydaLogo from '../../assets/nyda-logo.png';
@@ -6,42 +5,18 @@ import absaLogo from '../../assets/absa-logo.png';
 import xmsLogo from '../../assets/xms-logo.webp';
 import companyLogo from '../../assets/company-logo.png';
 import vision from '../../assets/vision.jpg';
+import theAnchor from '../../assets/theAnchor.jpg';
 
 const Home = () => {
-  const [currentLogoIndex, setCurrentLogoIndex] = useState(0);
-  const [animationClass, setAnimationClass] = useState('fade-in-right');
 
   const logos = [
     { src: nydaLogo, alt: "NYDA Logo", link: "https://www.nyda.gov.za" },
     { src: absaLogo, alt: "Absa Logo", link: "https://www.absa.africa/absaafrica/business/development/" },
     { src: companyLogo, alt: "Thee Anchor Pty Ltd Logo", link: "#" }, // Add link if available
-    { src: xmsLogo, alt: "XMS Logo", link: "https://www.xponentialmining.co.za/" }
+    { src: xmsLogo, alt: "XMS Logo", link: "https://www.xponentialmining.co.za/" },
+    { src: theAnchor, alt: "theAnchor Logo", link: "#" },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 10000); // Rotate every 10 seconds
-    return () => clearInterval(interval);
-  }, [currentLogoIndex]);
-
-  const handleNext = () => {
-    setAnimationClass('fade-out-left');
-    setTimeout(() => {
-      setCurrentLogoIndex((prevIndex) => (prevIndex + 1) % logos.length);
-      setAnimationClass('fade-in-right');
-    }, 1000); // Match timeout with transition duration
-  };
-
-  const handlePrev = () => {
-    setAnimationClass('fade-out-left');
-    setTimeout(() => {
-      setCurrentLogoIndex((prevIndex) =>
-        prevIndex === 0 ? logos.length - 1 : prevIndex - 1
-      );
-      setAnimationClass('fade-in-right');
-    }, 1000);
-  };
 
   return (
     <>
@@ -56,7 +31,7 @@ const Home = () => {
       </div>
 
       <div className="video-section">
-        <h2>OUR STORY</h2>
+        <h2>Our Story...</h2>
         <div className="video-box-centered">
           <video controls>
             <source src={sampleVideo} type="video/mp4" />

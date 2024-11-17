@@ -4,12 +4,11 @@ import officeImage from '../../assets/people-office-work-day.jpg';
 const Insights = () => {
   return (
     <div className='insights'>
-        <h2>Insights</h2>
+        <h2>INSIGHTS</h2>
         <div className='grid-container'>
             <div className='company-insights'>
                 <img src={officeImage} alt="People working in an office" className="insight-image" />
-                <p>Small Micro Medium Enterprises (SMMEs) due to the nature of their business operations
-and the lack of appropriate skills and well defined business processes are typically
+                <p>Small Micro Medium Enterprises (SMMEs) due to the nature of their business operations, lack of appropriate skills and well defined business processes are typically
 categorised as high risk. This means that growth and funding opportunities for most
 may be difficult to reach as this would require them to first meet the requirements set by
 funding and other development agencies.</p>
@@ -29,8 +28,8 @@ in place as a foundation which will enable proper risk management throughout thu
 dealing with potential risks that could potentially hamper on the achievement of set
 business objectives. There are other core business skills that we offer but we believe
 that risk management is a significant integral part of any business and the lack of it can
-result in business failure. At Legacy we bridge this gap through skills training,
-consulting and on the job business mentoring and coaching.</p>
+result in business failure. At Legacy we bridge this gap through skills development,
+consulting and business coaching.</p>
             </div>
         </div>
     </div>
