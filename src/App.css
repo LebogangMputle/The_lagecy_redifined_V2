@@ -1,8 +1,22 @@
+/* Base Styles */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif; /* Adjust font-family as needed */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+* {
+  box-sizing: inherit; /* Consistent box-sizing for all elements */
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the HTML element also covers the viewport height */
 }
 
 .main-content {
@@ -11,8 +25,8 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #222220; /* Adjust background color as needed */
-  padding: 0px 0px; /* Reduce padding for a more compact navbar */
+  background-color: #222220;
+  padding: 0px 0px;
 }
 
 .navbar ul {
@@ -22,6 +36,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
 }
 
 .navbar ul li {
@@ -29,10 +44,10 @@ body {
 }
 
 .navbar a {
-  color: #d9a760; /* Adjust link color */
+  color: #d9a760;
   text-decoration: none;
-  font-size: 0.9rem; /* Reduced font size for navbar links */
-  padding: 10px 25px; /* Adjust padding for navbar items */
+  font-size: 0.9rem;
+  padding: 10px 25px;
 }
 
 .navbar a:hover {
@@ -41,62 +56,146 @@ body {
 
 /* General Section Styling */
 section {
-  padding: 20px 15px; /* Reduced padding for sections */
-  margin-bottom: 20px; /* Reduce space below sections */
-  font-size: 0.95rem; /* Reduced font size for the app */
+  padding: 20px 15px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
 }
 
 /* Clients Section */
 .clients-section {
-  padding: 20px 20px; /* Reduced padding for the clients section */
+  padding: 20px 20px;
   background-color: #fff;
   text-align: center;
   position: relative;
-  font-size: 0.9rem; /* Smaller font size for section text */
+  font-size: 0.9rem;
 }
 
 .clients-logos {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Reduced gap between logos */
+  flex-wrap: wrap; /* Allows logos to wrap on smaller screens */
+  gap: 10px; /* Adjust gap for smaller devices */
 }
 
 .client-logo {
-  width: 120px; /* Smaller logo size */
+  width: 80px; /* Smaller size for mobile */
   height: auto;
-  border: none; /* Remove any default border */
+  border: none;
 }
 
 /* Footer Section */
 .footer {
-  padding: 0px; /* Reduce padding for the footer */
+  padding: 10px; /* Adjust padding for smaller screens */
   background-color: #20201f;
   color: white;
   text-align: center;
-  font-size: 0.85rem; /* Reduced font size for footer */
+  font-size: 0.85rem;
 }
 
 /* Hero Section */
 .hero-title {
-  font-size: 3.5em; /* Reduce hero title size */
+  font-size: 2.5em; /* Adjust for mobile */
 }
 
 /* Buttons */
 .btn {
-  padding: 10px 20px; /* Adjust padding */
-  font-size: 1rem; /* Reduced button font size */
+  padding: 8px 15px; /* Adjust padding for buttons */
+  font-size: 0.9rem; /* Adjust button font size */
 }
 
 /* Video Section */
 .video-section h2 {
-  font-size: 4rem; /* Reduced video section title size */
+  font-size: 2rem; /* Adjust title size for mobile */
 }
 
 .vision-mission-section h2 {
-  font-size: 2rem; /* Reduced title size for vision/mission section */
+  font-size: 1.5rem;
 }
 
 .vision-mission-section p {
-  font-size: 1rem; /* Reduced paragraph font size */
+  font-size: 0.95rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Adjust navbar for tablets and smaller devices */
+  .navbar ul {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .navbar a {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  /* Hero Section */
+  .hero-title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  /* Clients Section */
+  .clients-logos {
+    gap: 10px; /* Reduce gap further */
+  }
+
+  .client-logo {
+    width: 60px; /* Reduce logo size for smaller devices */
+  }
+
+  /* General Section Styling */
+  section {
+    padding: 15px 10px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .navbar ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar a {
+    font-size: 0.7rem;
+  }
+
+  .hero-title {
+    font-size: 1.8em;
+  }
+
+  .clients-logos {
+    gap: 5px;
+  }
+
+  .client-logo {
+    width: 50px; /* Smaller size for very small devices */
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  section {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+  }
 }
