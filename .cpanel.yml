@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - echo "Starting React app deployment"
+    - npm install
+    - npm run build
+    - export DEPLOYPATH=/home/<lesegok23@gmail.com>/public_html
+    - rsync -avz --delete build/ $DEPLOYPATH
+    - echo "Deployment completed."
