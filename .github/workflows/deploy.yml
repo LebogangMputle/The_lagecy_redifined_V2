@@ -1,4 +1,4 @@
-name: Deploy to Afrihost via FTP
+gitname: Deploy to Afrihost via FTP
 
 on:
   push:
