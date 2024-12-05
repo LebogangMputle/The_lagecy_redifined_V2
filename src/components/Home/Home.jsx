@@ -6,6 +6,7 @@ import xmsLogo from '../../assets/xms-logo.webp';
 import companyLogo from '../../assets/company-logo.png';
 import vision from '../../assets/vision.jpg';
 import theAnchor from '../../assets/theAnchor.jpg';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
 
@@ -24,8 +25,8 @@ const Home = () => {
       <div className="hero-section">
         <div className="hero-content">
           <div className="button-group">
-            <a href="/ourServices" className="btn btn-services">Our Services</a>
-            <a href="/contactUs" className="btn btn-contact">Contact Us</a>
+            <NavLink to="/ourServices" className="btn btn-services">Our Services</NavLink>
+            <NavLink to="/contactUs" className="btn btn-contact">Contact Us</NavLink>
           </div>
         </div>
       </div>
